@@ -17,6 +17,9 @@ import bannedCards from '../data/banned-cards.json';
 import featuredCards from '../data/featured-cards.json';
 import allstarCards from '../data/allstar-cards.json';
 import decks from '../data/decks.json';
+
+// Import analytics
+import { inject } from '@vercel/analytics';
 ---
 
 <html lang="en">
@@ -648,9 +651,10 @@ import decks from '../data/decks.json';
 				}
 			}
 		</style>
-		<script>
-			import { inject } from '@vercel/analytics';
-			inject();
+		<script is:inline>
+			// Vercel Analytics
+			!function(){var e=window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};e.l=+new Date}();
 		</script>
+		<script async defer src="https://va.vercel-scripts.com/v1/script.js"></script>
 	</body>
 </html>
