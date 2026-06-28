@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd shaggy-sphere && npm run build",
+  "outputDirectory": "shaggy-sphere/dist",
+  "installCommand": "cd shaggy-sphere && npm install"
+}
