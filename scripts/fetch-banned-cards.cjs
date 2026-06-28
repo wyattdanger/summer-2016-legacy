@@ -1,55 +1,84 @@
 const fs = require('fs');
 const https = require('https');
 
-// List of banned cards - from the banlist in the HTML
+// List of banned cards - Legacy banlist as of July 2016
+// Based on research of bans through September 2015 (Dig Through Time)
 const bannedCardNames = [
-  'Ancestral Recall',
-  'Balance',
-  'Bazaar of Baghdad',
-  'Black Lotus',
-  'Bronze Tablet',
-  'Channel',
+  // Dexterity cards
   'Chaos Orb',
+  'Falling Star',
+  // Ante cards
+  'Amulet of Quoz',
+  'Bronze Tablet',
   'Contract from Below',
   'Darkpact',
-  'Demonic Consultation',
-  'Earthcraft',
-  'Falling Star',
-  'Fastbond',
-  'Goblin Recruiter',
-  'Hermit Druid',
-  'Imperial Seal',
+  'Demonic Attorney',
   'Jeweled Bird',
-  'Library of Alexandria',
-  'Mana Crypt',
-  'Mana Vault',
-  'Mind Twist',
-  "Mind's Desire",
+  'Rebirth',
+  'Tempest Efreet',
+  'Timmerian Fiends',
+  // Subgame card
+  'Shahrazad',
+  // Power 9
+  'Ancestral Recall',
+  'Black Lotus',
   'Mox Emerald',
   'Mox Jet',
   'Mox Pearl',
   'Mox Ruby',
   'Mox Sapphire',
-  'Rebirth',
-  'Shahrazad',
-  'Skullclamp',
-  'Sol Ring',
-  'Strip Mine',
-  'Survival of the Fittest',
-  'Tempest Efreet',
   'Time Walk',
-  'Timmerian Fiends',
   'Timetwister',
+  // Fast mana
+  'Channel',
+  'Fastbond',
+  'Mana Crypt',
+  'Mana Drain',
+  'Mana Vault',
+  'Sol Ring',
+  // Powerful lands
+  'Bazaar of Baghdad',
+  'Library of Alexandria',
+  'Strip Mine',
+  'Tolarian Academy',
+  // Tutors
+  'Demonic Consultation',
+  'Demonic Tutor',
+  'Imperial Seal',
+  'Mystical Tutor',
+  'Tinker',
   'Vampiric Tutor',
+  // Card draw / advantage
+  'Dig Through Time', // Banned September 2015
+  'Frantic Search',
+  'Gush',
+  'Memory Jar',
+  'Necropotence',
+  'Skullclamp',
+  'Treasure Cruise', // Banned January 2015
+  'Wheel of Fortune',
   'Windfall',
   "Yawgmoth's Bargain",
+  // Combo pieces
+  'Balance',
+  'Earthcraft',
+  'Flash', // Banned 2007
+  'Goblin Recruiter',
+  'Hermit Druid',
+  'Mental Misstep', // Banned 2011
+  'Mind Twist',
+  "Mind's Desire",
+  'Oath of Druids',
+  'Survival of the Fittest', // Banned 2010
+  'Time Vault',
   "Yawgmoth's Will"
 ];
 
 function fetchCard(cardName) {
   return new Promise((resolve, reject) => {
-    // Get oldest printing by using search with order=released
-    const url = `https://api.scryfall.com/cards/search?q=${encodeURIComponent(`!"${cardName}"`)}&order=released&dir=asc`;
+    // Get oldest printing by using search with unique=prints and order=released
+    // This ensures we get the actual first printing, not just the first card
+    const url = `https://api.scryfall.com/cards/search?q=${encodeURIComponent(`!"${cardName}"`)}&unique=prints&order=released&dir=asc`;
 
     const options = {
       headers: {
@@ -100,8 +129,8 @@ async function fetchAllBannedCards() {
         collector_number: card.collector_number
       });
 
-      // Rate limit: wait 200ms between requests (max 5 requests/sec)
-      await new Promise(resolve => setTimeout(resolve, 200));
+      // Rate limit: wait 150ms between requests (max ~6 requests/sec, well under the 10/sec limit)
+      await new Promise(resolve => setTimeout(resolve, 150));
     } catch (error) {
       console.error(`Error fetching ${cardName}:`, error.message);
     }

@@ -1,5 +1,12 @@
 [
   {
+    "name": "Amulet of Quoz",
+    "image_uri": "https://cards.scryfall.io/normal/front/7/6/764ec6a8-a878-446c-b7e4-6026c2a3e9a4.jpg?1562916864",
+    "scryfall_uri": "https://scryfall.com/card/ice/308/amulet-of-quoz?utm_source=api",
+    "set": "ice",
+    "set_name": "Ice Age"
+  },
+  {
     "name": "Ancestral Recall",
     "image_uri": "https://cards.scryfall.io/normal/front/7/0/70e7ddf2-5604-41e7-bb9d-ddd03d3e9d0b.jpg?1559591549",
     "scryfall_uri": "https://scryfall.com/card/lea/47/ancestral-recall?utm_source=api",
@@ -63,11 +70,32 @@
     "set_name": "Limited Edition Alpha"
   },
   {
+    "name": "Demonic Attorney",
+    "image_uri": "https://cards.scryfall.io/normal/front/f/d/fd891fc6-d9d6-494e-ae65-8bea8f44b575.jpg?1559591709",
+    "scryfall_uri": "https://scryfall.com/card/lea/102/demonic-attorney?utm_source=api",
+    "set": "lea",
+    "set_name": "Limited Edition Alpha"
+  },
+  {
     "name": "Demonic Consultation",
     "image_uri": "https://cards.scryfall.io/normal/front/8/d/8d727b9b-6114-414d-9172-16b6e1db41cc.jpg?1562921228",
     "scryfall_uri": "https://scryfall.com/card/ice/121/demonic-consultation?utm_source=api",
     "set": "ice",
     "set_name": "Ice Age"
+  },
+  {
+    "name": "Demonic Tutor",
+    "image_uri": "https://cards.scryfall.io/normal/front/7/1/711d4d54-5520-4de8-9b93-79902ed8e562.jpg?1559591474",
+    "scryfall_uri": "https://scryfall.com/card/lea/104/demonic-tutor?utm_source=api",
+    "set": "lea",
+    "set_name": "Limited Edition Alpha"
+  },
+  {
+    "name": "Dig Through Time",
+    "image_uri": "https://cards.scryfall.io/normal/front/5/c/5c18c2d8-995c-4736-bdef-464abcd1d31a.jpg?1562787144",
+    "scryfall_uri": "https://scryfall.com/card/ktk/36/dig-through-time?utm_source=api",
+    "set": "ktk",
+    "set_name": "Khans of Tarkir"
   },
   {
     "name": "Earthcraft",
@@ -91,11 +119,32 @@
     "set_name": "Limited Edition Alpha"
   },
   {
+    "name": "Flash",
+    "image_uri": "https://cards.scryfall.io/normal/front/6/3/63af3c26-5b1f-46f6-9aa2-036c615bf5ea.jpg?1562719749",
+    "scryfall_uri": "https://scryfall.com/card/mir/66/flash?utm_source=api",
+    "set": "mir",
+    "set_name": "Mirage"
+  },
+  {
+    "name": "Frantic Search",
+    "image_uri": "https://cards.scryfall.io/normal/front/1/9/1904db14-6df7-424f-afa5-e3dfab31300a.jpg?1764758766",
+    "scryfall_uri": "https://scryfall.com/card/ulg/32/frantic-search?utm_source=api",
+    "set": "ulg",
+    "set_name": "Urza's Legacy"
+  },
+  {
     "name": "Goblin Recruiter",
     "image_uri": "https://cards.scryfall.io/normal/front/6/e/6ee791d5-1d48-40e8-b65f-b6aa889f3467.jpg?1562277683",
     "scryfall_uri": "https://scryfall.com/card/vis/80/goblin-recruiter?utm_source=api",
     "set": "vis",
     "set_name": "Visions"
+  },
+  {
+    "name": "Gush",
+    "image_uri": "https://cards.scryfall.io/normal/front/e/7/e755bbef-bf34-49c0-ae72-d70e3599de52.jpg?1562383522",
+    "scryfall_uri": "https://scryfall.com/card/mmq/82/gush?utm_source=api",
+    "set": "mmq",
+    "set_name": "Mercadian Masques"
   },
   {
     "name": "Hermit Druid",
@@ -133,11 +182,32 @@
     "set_name": "HarperPrism Book Promos"
   },
   {
+    "name": "Mana Drain",
+    "image_uri": "https://cards.scryfall.io/normal/front/e/6/e691adef-3027-4e6a-889f-9f4e2df36a7c.jpg?1562861377",
+    "scryfall_uri": "https://scryfall.com/card/leg/65/mana-drain?utm_source=api",
+    "set": "leg",
+    "set_name": "Legends"
+  },
+  {
     "name": "Mana Vault",
     "image_uri": "https://cards.scryfall.io/normal/front/1/9/19499cb7-eccb-4e69-af32-6002d447a160.jpg?1559591420",
     "scryfall_uri": "https://scryfall.com/card/lea/259/mana-vault?utm_source=api",
     "set": "lea",
     "set_name": "Limited Edition Alpha"
+  },
+  {
+    "name": "Memory Jar",
+    "image_uri": "https://cards.scryfall.io/normal/front/a/1/a15d33d6-7213-4482-a1be-ac0a73644af6.jpg?1562863775",
+    "scryfall_uri": "https://scryfall.com/card/ulg/129/memory-jar?utm_source=api",
+    "set": "ulg",
+    "set_name": "Urza's Legacy"
+  },
+  {
+    "name": "Mental Misstep",
+    "image_uri": "https://cards.scryfall.io/normal/front/6/1/61e9c6df-1c84-4eab-9076-a4feb6347c10.jpg?1566819829",
+    "scryfall_uri": "https://scryfall.com/card/nph/38/mental-misstep?utm_source=api",
+    "set": "nph",
+    "set_name": "New Phyrexia"
   },
   {
     "name": "Mind Twist",
@@ -189,6 +259,27 @@
     "set_name": "Limited Edition Alpha"
   },
   {
+    "name": "Mystical Tutor",
+    "image_uri": "https://cards.scryfall.io/normal/front/5/d/5d98101f-e32a-4a4a-a649-faa920d111ee.jpg?1764758761",
+    "scryfall_uri": "https://scryfall.com/card/mir/80/mystical-tutor?utm_source=api",
+    "set": "mir",
+    "set_name": "Mirage"
+  },
+  {
+    "name": "Necropotence",
+    "image_uri": "https://cards.scryfall.io/normal/front/5/4/54d7a0c1-efb4-4a8d-ad92-a96d43835052.jpg?1562910576",
+    "scryfall_uri": "https://scryfall.com/card/ice/154/necropotence?utm_source=api",
+    "set": "ice",
+    "set_name": "Ice Age"
+  },
+  {
+    "name": "Oath of Druids",
+    "image_uri": "https://cards.scryfall.io/normal/front/c/f/cf14de50-d123-400c-862e-2c95fd2aa23f.jpg?1562088805",
+    "scryfall_uri": "https://scryfall.com/card/exo/115/oath-of-druids?utm_source=api",
+    "set": "exo",
+    "set_name": "Exodus"
+  },
+  {
     "name": "Rebirth",
     "image_uri": "https://cards.scryfall.io/normal/front/a/0/a0d3ce01-e344-4608-b709-320be3600019.jpg?1562860171",
     "scryfall_uri": "https://scryfall.com/card/leg/200/rebirth?utm_source=api",
@@ -238,9 +329,23 @@
     "set_name": "Legends"
   },
   {
+    "name": "Time Vault",
+    "image_uri": "https://cards.scryfall.io/normal/front/9/0/902441dc-c976-4c92-b897-6376eaa0fe38.jpg?1559591445",
+    "scryfall_uri": "https://scryfall.com/card/lea/274/time-vault?utm_source=api",
+    "set": "lea",
+    "set_name": "Limited Edition Alpha"
+  },
+  {
     "name": "Time Walk",
     "image_uri": "https://cards.scryfall.io/normal/front/e/0/e0139f60-d48e-46fb-9f5a-1e3d7558c834.jpg?1559591444",
     "scryfall_uri": "https://scryfall.com/card/lea/83/time-walk?utm_source=api",
+    "set": "lea",
+    "set_name": "Limited Edition Alpha"
+  },
+  {
+    "name": "Timetwister",
+    "image_uri": "https://cards.scryfall.io/normal/front/9/a/9a49dc44-616e-4bdd-8220-0bb71eccc512.jpg?1559591443",
+    "scryfall_uri": "https://scryfall.com/card/lea/84/timetwister?utm_source=api",
     "set": "lea",
     "set_name": "Limited Edition Alpha"
   },
@@ -252,11 +357,25 @@
     "set_name": "Homelands"
   },
   {
-    "name": "Timetwister",
-    "image_uri": "https://cards.scryfall.io/normal/front/9/a/9a49dc44-616e-4bdd-8220-0bb71eccc512.jpg?1559591443",
-    "scryfall_uri": "https://scryfall.com/card/lea/84/timetwister?utm_source=api",
-    "set": "lea",
-    "set_name": "Limited Edition Alpha"
+    "name": "Tinker",
+    "image_uri": "https://cards.scryfall.io/normal/front/7/d/7da23b15-dfb8-4267-9b33-d7a4c035c434.jpg?1562863289",
+    "scryfall_uri": "https://scryfall.com/card/ulg/45/tinker?utm_source=api",
+    "set": "ulg",
+    "set_name": "Urza's Legacy"
+  },
+  {
+    "name": "Tolarian Academy",
+    "image_uri": "https://cards.scryfall.io/normal/front/a/d/ad7ac9a5-340f-4509-826c-7b9416d47887.jpg?1562931623",
+    "scryfall_uri": "https://scryfall.com/card/usg/330/tolarian-academy?utm_source=api",
+    "set": "usg",
+    "set_name": "Urza's Saga"
+  },
+  {
+    "name": "Treasure Cruise",
+    "image_uri": "https://cards.scryfall.io/normal/front/7/a/7a59d4b1-6cf4-44ec-8a96-1bb7094fea21.jpg?1562788963",
+    "scryfall_uri": "https://scryfall.com/card/ktk/59/treasure-cruise?utm_source=api",
+    "set": "ktk",
+    "set_name": "Khans of Tarkir"
   },
   {
     "name": "Vampiric Tutor",
@@ -264,6 +383,13 @@
     "scryfall_uri": "https://scryfall.com/card/vis/72/vampiric-tutor?utm_source=api",
     "set": "vis",
     "set_name": "Visions"
+  },
+  {
+    "name": "Wheel of Fortune",
+    "image_uri": "https://cards.scryfall.io/normal/front/6/7/67b369c4-faa8-45c8-a1b9-98f228b69682.jpg?1559591623",
+    "scryfall_uri": "https://scryfall.com/card/lea/183/wheel-of-fortune?utm_source=api",
+    "set": "lea",
+    "set_name": "Limited Edition Alpha"
   },
   {
     "name": "Windfall",
