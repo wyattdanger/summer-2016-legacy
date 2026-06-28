@@ -1,0 +1,107 @@
+[
+  {
+    "name": "SCG Worcester",
+    "eventId": "12947",
+    "url": "https://mtgtop8.com/event?e=12947&f=LE",
+    "top8": [
+      { "place": 1, "player": "Ed Dimicco", "deck": "UR Delver", "deckId": "275411" },
+      { "place": 2, "player": "Kevin King", "deck": "Lands", "deckId": "275410" },
+      { "place": 3, "player": "Rob Blocher", "deck": "Dragon Stompy", "deckId": "275434" },
+      { "place": 4, "player": "Joe Lossett", "deck": "UW Miracles", "deckId": "275435" },
+      { "place": 5, "player": "Ben Friedman", "deck": "4c Delver", "deckId": "275433" },
+      { "place": 6, "player": "Todd Stevens", "deck": "Berserk Poison", "deckId": "275432" },
+      { "place": 7, "player": "Jeff Hoogland", "deck": "Mono Red Sneak Attack", "deckId": "275431" },
+      { "place": 8, "player": "Jonathan Morawski", "deck": "Reanimator", "deckId": "275430" }
+    ]
+  },
+  {
+    "name": "SCG Dallas",
+    "eventId": "12863",
+    "url": "https://mtgtop8.com/event?e=12863&f=LE",
+    "top8": [
+      { "place": 1, "player": "Jarrod Feight", "deck": "Death & Taxes", "deckId": "274735" },
+      { "place": 2, "player": "Ben Kendrick", "deck": "Eldrazi Aggro", "deckId": "274730" },
+      { "place": 3, "player": "Mark Church", "deck": "Death & Taxes", "deckId": "274728" },
+      { "place": 4, "player": "Patrick Vincent", "deck": "Reanimator", "deckId": "274729" },
+      { "place": 5, "player": "Steven Fremin", "deck": "Death & Taxes", "deckId": "274725" },
+      { "place": 6, "player": "Albert Huang", "deck": "Doomsday", "deckId": "274726" },
+      { "place": 7, "player": "Keane Frady", "deck": "Dredge", "deckId": "274724" },
+      { "place": 8, "player": "Russell Cooper", "deck": "Lands", "deckId": "274727" }
+    ]
+  },
+  {
+    "name": "BoM Annecy",
+    "eventId": "12303",
+    "url": "https://mtgtop8.com/event?e=12303&f=LE",
+    "top8": [
+      { "place": 1, "player": "Anton Karlinski", "deck": "Eldrazi Aggro", "deckId": "270943" },
+      { "place": 2, "player": "Florian Stange", "deck": "Belcher", "deckId": "270942" },
+      { "place": 3, "player": "Damien Uliana", "deck": "ANT", "deckId": "270940" },
+      { "place": 4, "player": "Serafin Wellinger", "deck": "UW Miracles", "deckId": "270941" },
+      { "place": 5, "player": "Carlos Moral", "deck": "ANT", "deckId": "270937" },
+      { "place": 6, "player": "Guillaume Perbet", "deck": "BUG Thing in the Ice", "deckId": "270936" },
+      { "place": 7, "player": "David Teze", "deck": "Elfball Lands", "deckId": "270939" },
+      { "place": 8, "player": "Peter White", "deck": "Grixis Delver", "deckId": "270938" }
+    ]
+  },
+  {
+    "name": "MKM Frankfurt",
+    "eventId": "12433",
+    "url": "https://mtgtop8.com/event?e=12433&f=LE",
+    "top8": [
+      { "place": 1, "player": "Niklas Kronberger", "deck": "Loam", "deckId": "271510" },
+      { "place": 2, "player": "Fabian Görzgen", "deck": "Maverick", "deckId": "271511" },
+      { "place": 3, "player": "Niklas Holtmann", "deck": "Elves", "deckId": "271509" },
+      { "place": 4, "player": "David Raabe", "deck": "Storm", "deckId": "271508" },
+      { "place": 5, "player": "Amadeus Kurz", "deck": "BUG Midrange", "deckId": "271512" },
+      { "place": 6, "player": "Jonas Zimmermann", "deck": "Nic Fit", "deckId": "271513" },
+      { "place": 7, "player": "Felix Höfler", "deck": "Stoneblade", "deckId": "271514" },
+      { "place": 8, "player": "Stefan Schütz", "deck": "UW Miracles", "deckId": "271515" }
+    ]
+  },
+  {
+    "name": "SCG Indianapolis",
+    "eventId": "12443",
+    "url": "https://mtgtop8.com/event?e=12443&f=LE",
+    "top8": [
+      { "place": 1, "player": "Clay Spicklemire", "deck": "Infect", "deckId": "271580" },
+      { "place": 2, "player": "Robert Cucunato", "deck": "Reanimator", "deckId": "271579" },
+      { "place": 3, "player": "Riley Curran", "deck": "Elves", "deckId": "271578" },
+      { "place": 4, "player": "Jon Lenz", "deck": "Goblins", "deckId": "271577" },
+      { "place": 5, "player": "Matthew Tickal", "deck": "Miracles", "deckId": "271591" },
+      { "place": 6, "player": "Isaac Siegmund", "deck": "Storm", "deckId": "271592" },
+      { "place": 7, "player": "Jim Davis", "deck": "Sultai Delver", "deckId": "271584" },
+      { "place": 8, "player": "Michael Finnegan", "deck": "Tinfins", "deckId": "271583" }
+    ]
+  },
+  {
+    "name": "GP Prague",
+    "eventId": "12671",
+    "url": "https://mtgtop8.com/event?e=12671&f=LE",
+    "top8": [
+      { "place": 1, "player": "Rodrigo Togores", "deck": "Storm", "deckId": "273451" },
+      { "place": 2, "player": "Nicolas Tholance", "deck": "UW Miracles", "deckId": "273452" },
+      { "place": 3, "player": "Thomas Enevoldsen", "deck": "Death & Taxes", "deckId": "273450" },
+      { "place": 4, "player": "Alexander Hayne", "deck": "Grixis Delver", "deckId": "273449" },
+      { "place": 5, "player": "Gianluca Gazzola", "deck": "Canadian Threshold", "deckId": "273417" },
+      { "place": 6, "player": "Arnaud Baglin", "deck": "Grixis Delver", "deckId": "273418" },
+      { "place": 7, "player": "Lukas Blohon", "deck": "Shardless BUG", "deckId": "273447" },
+      { "place": 8, "player": "Niels Molle", "deck": "Show and Tell", "deckId": "273448" }
+    ]
+  },
+  {
+    "name": "GP Columbus",
+    "eventId": "12681",
+    "url": "https://mtgtop8.com/event?e=12681&f=LE",
+    "top8": [
+      { "place": 1, "player": "Clay Spicklemire", "deck": "Berserk Poison", "deckId": "273542" },
+      { "place": 2, "player": "Joe Lossett", "deck": "UW Miracles", "deckId": "273541" },
+      { "place": 3, "player": "Noah Walker", "deck": "Grixis Delver", "deckId": "273540" },
+      { "place": 4, "player": "Christopher Walton", "deck": "UW Miracles", "deckId": "273539" },
+      { "place": 5, "player": "Jarvis Yu", "deck": "Lands", "deckId": "273534" },
+      { "place": 6, "player": "Raymond Cornely", "deck": "Reanimator", "deckId": "273533" },
+      { "place": 7, "player": "Aaron Kasprzak", "deck": "UW Miracles", "deckId": "273535" },
+      { "place": 8, "player": "Wilson Hunter", "deck": "UW Miracles", "deckId": "273532" }
+    ]
+  }
+]

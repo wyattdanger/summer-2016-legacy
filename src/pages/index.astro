@@ -75,7 +75,7 @@ import { inject } from '@vercel/analytics';
 		<footer>
 			<div class="container">
 				<p>
-					An unofficial fan format.
+					{FORMAT_NAME} is an unofficial fan format.
 				</p>
 				<p class="disclaimer">
 					Magic: The Gathering is trademark and copyright Wizards of the Coast, Inc.
@@ -92,40 +92,40 @@ import { inject } from '@vercel/analytics';
 			}
 
 			:root {
-				/* Instagram palm tree filter palette - from reference image */
-				--color-bg: #f4e8d8;
-				--color-bg-alt: #fdf6ec;
-				--color-card: #fffbf2;
-				--color-text: #4a3820;
-				--color-text-muted: #8d7558;
-				--color-accent: #d97e54;
-				--color-accent-dark: #c16d47;
-				--color-sunset-orange: #e8a76a;
-				--color-sunset-pink: #d97b8f;
-				--color-sunset-purple: #8b6d9c;
-				--color-border: #d9c9ad;
+				/* California wine sunset palette */
+				--color-bg: #f5e8dc;
+				--color-bg-alt: #fef5ed;
+				--color-card: #fffaf5;
+				--color-text: #3d2a1f;
+				--color-text-muted: #6d5548;
+				--color-accent: #E46B56;
+				--color-accent-dark: #D84574;
+				--color-sunset-orange: #E8A370;
+				--color-sunset-pink: #D84574;
+				--color-sunset-purple: #B23B7C;
+				--color-border: #e8c9b5;
 
-				/* Cool tones from the sky and shadows */
+				/* Cool tones from the dusk sky and shadows */
 				--color-sky-blue: #7ea5c9;
 				--color-sky-deep: #5d8ab8;
 				--color-tree-green: #88a186;
 				--color-sage: #a1b097;
-				--color-dusk-blue: #8691a8;
-				--color-palm-shadow: #6d5575;
+				--color-dusk-blue: #6B3B7C;
+				--color-palm-shadow: #2B2259;
 
 				/* Derived colors with opacity for overlays and effects */
-				--overlay-orange-light: rgba(232, 167, 106, 0.1);
-				--overlay-pink-light: rgba(217, 123, 143, 0.1);
-				--overlay-purple-light: rgba(139, 109, 156, 0.1);
-				--overlay-orange-medium: rgba(217, 126, 84, 0.3);
-				--overlay-pink-medium: rgba(217, 123, 143, 0.2);
-				--overlay-purple-medium: rgba(139, 109, 156, 0.3);
-				--overlay-orange-subtle: rgba(217, 126, 84, 0.05);
-				--overlay-pink-subtle: rgba(217, 123, 143, 0.05);
-				--overlay-purple-subtle: rgba(109, 85, 117, 0.05);
-				--overlay-orange-strong: rgba(217, 126, 84, 0.15);
-				--overlay-pink-strong: rgba(217, 123, 143, 0.15);
-				--overlay-purple-strong: rgba(139, 109, 156, 0.15);
+				--overlay-orange-light: rgba(232, 163, 112, 0.1);
+				--overlay-pink-light: rgba(216, 69, 116, 0.1);
+				--overlay-purple-light: rgba(178, 59, 124, 0.1);
+				--overlay-orange-medium: rgba(228, 107, 86, 0.3);
+				--overlay-pink-medium: rgba(216, 69, 116, 0.2);
+				--overlay-purple-medium: rgba(178, 59, 124, 0.3);
+				--overlay-orange-subtle: rgba(228, 107, 86, 0.05);
+				--overlay-pink-subtle: rgba(216, 69, 116, 0.05);
+				--overlay-purple-subtle: rgba(107, 59, 124, 0.05);
+				--overlay-orange-strong: rgba(228, 107, 86, 0.15);
+				--overlay-pink-strong: rgba(216, 69, 116, 0.15);
+				--overlay-purple-strong: rgba(178, 59, 124, 0.15);
 
 				/* Cool tone overlays - sky and palm shadows */
 				--overlay-blue-light: rgba(126, 165, 201, 0.1);
@@ -276,7 +276,7 @@ import { inject } from '@vercel/analytics';
 			}
 
 			.hero {
-				padding: var(--spacing-md) 0;
+				padding: var(--spacing-xl) 0 var(--spacing-lg);
 				text-align: center;
 				background: linear-gradient(135deg,
 					var(--overlay-orange-strong) 0%,
@@ -299,12 +299,13 @@ import { inject } from '@vercel/analytics';
 			}
 
 			.hero h2 {
-				font-size: 3rem;
-				margin-bottom: var(--spacing-sm);
+				font-size: 4rem;
+				margin-bottom: var(--spacing-md);
 				color: var(--color-accent-dark);
 				font-weight: 400;
 				text-shadow: 2px 2px 4px var(--white-soft);
-				letter-spacing: 1px;
+				letter-spacing: -0.5px;
+				line-height: 1.1;
 			}
 
 			.tagline {
@@ -317,11 +318,118 @@ import { inject } from '@vercel/analytics';
 			}
 
 			.intro {
+				font-size: 1.35rem;
+				max-width: 650px;
+				margin: 0 auto 1rem;
+				line-height: 1.65;
+				font-family: 'Georgia', 'Times New Roman', serif;
+				font-style: normal;
+			}
+
+			.intro-secondary {
+				font-size: 1.5rem;
+				max-width: 500px;
+				margin: 1.5rem auto 2rem;
+				padding: 1rem 1.5rem;
+				line-height: 1.4;
+				font-family: 'Georgia', 'Times New Roman', serif;
+				font-style: italic;
+				font-weight: 600;
+				color: var(--color-accent-dark);
+				background: var(--card-bg);
+				border: 3px solid var(--color-accent);
+				border-radius: 8px;
+				box-shadow: 0 6px 16px var(--shadow-orange);
+				text-shadow: none;
+			}
+
+			.hero-body {
+				font-size: 1.125rem;
+				max-width: 650px;
+				margin: 0 auto 2.5rem;
+				line-height: 1.7;
+				font-family: 'Georgia', 'Times New Roman', serif;
+			}
+
+			.hero p {
+				font-size: 1.125rem;
+				max-width: 650px;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: var(--spacing-md);
+				line-height: 1.7;
+			}
+
+			.hero p:last-child {
+				margin-bottom: 0;
+			}
+
+			.two-column {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: var(--spacing-lg);
+				margin: var(--spacing-lg) auto;
+				max-width: 900px;
+				text-align: left;
+			}
+
+			.two-column .column {
+				background: var(--card-bg);
+				padding: var(--spacing-md);
+				border-radius: 8px;
+				border: 2px solid var(--color-border);
+				box-shadow: 0 4px 12px var(--shadow-orange);
+			}
+
+			.two-column .negatives {
+				border-left: 4px solid var(--color-sunset-pink);
+			}
+
+			.two-column .positives {
+				border-left: 4px solid var(--color-tree-green);
+			}
+
+			.two-column h3 {
 				font-size: 1.15rem;
-				max-width: 800px;
-				margin: 0 auto var(--spacing-sm);
-				line-height: 1.8;
-				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+				margin-bottom: var(--spacing-sm);
+				color: var(--color-accent-dark);
+				font-weight: 500;
+			}
+
+			.two-column ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+
+			.two-column li {
+				padding: 0.5rem 0;
+				padding-left: var(--spacing-md);
+				position: relative;
+				font-size: 1.05rem;
+				line-height: 1.6;
+			}
+
+			.negatives li:before {
+				content: "✗";
+				position: absolute;
+				left: 0;
+				color: var(--color-sunset-pink);
+				font-weight: bold;
+			}
+
+			.positives li:before {
+				content: "✓";
+				position: absolute;
+				left: 0;
+				color: var(--color-tree-green);
+				font-weight: bold;
+			}
+
+			.format-details {
+				font-size: 1rem;
+				color: var(--color-text-muted);
+				margin-top: var(--spacing-md);
 			}
 
 			h2 {
@@ -612,7 +720,28 @@ import { inject } from '@vercel/analytics';
 				}
 
 				.hero h2 {
-					font-size: 2rem;
+					font-size: 2.5rem;
+					letter-spacing: -0.25px;
+				}
+
+				.intro {
+					font-size: 1.2rem;
+					max-width: 90%;
+				}
+
+				.intro-secondary {
+					font-size: 1.05rem;
+					max-width: 90%;
+				}
+
+				.hero-body {
+					font-size: 1.05rem;
+					max-width: 90%;
+				}
+
+				.hero p {
+					font-size: 1.05rem;
+					max-width: 90%;
 				}
 
 				h2 {
@@ -630,6 +759,11 @@ import { inject } from '@vercel/analytics';
 				.banlist-single ul {
 					columns: 1;
 				}
+
+				.two-column {
+					grid-template-columns: 1fr;
+					gap: var(--spacing-md);
+				}
 			}
 
 			@media (max-width: 480px) {
@@ -638,7 +772,24 @@ import { inject } from '@vercel/analytics';
 				}
 
 				.hero h2 {
-					font-size: 1.75rem;
+					font-size: 2rem;
+					letter-spacing: 0;
+				}
+
+				.intro {
+					font-size: 1.1rem;
+				}
+
+				.intro-secondary {
+					font-size: 1rem;
+				}
+
+				.hero-body {
+					font-size: 1rem;
+				}
+
+				.hero p {
+					font-size: 1rem;
 				}
 
 				.site-title {

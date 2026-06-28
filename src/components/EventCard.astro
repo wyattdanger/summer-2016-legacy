@@ -1,0 +1,82 @@
+---
+interface DecklistEntry {
+  place: number;
+  player: string;
+  deck: string;
+  deckId: string;
+}
+
+interface Props {
+  name: string;
+  eventId: string;
+  url: string;
+  top8: DecklistEntry[];
+}
+
+const { name, eventId, url, top8 } = Astro.props;
+---
+
+<div class="event-card">
+  <h3><a href={url} target="_blank" rel="noopener noreferrer">{name}</a></h3>
+  <ul class="top8-list">
+    {top8.map(entry => (
+      <li>
+        <a
+          href={`https://mtgtop8.com/event?e=${eventId}&d=${entry.deckId}&f=LE`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {entry.place}. {entry.player} - {entry.deck}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .event-card {
+    background: rgba(255, 255, 255, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .event-card h3 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.3rem;
+    color: var(--color-accent-dark);
+  }
+
+  .event-card h3 a {
+    color: var(--color-accent-dark);
+    text-decoration: none;
+  }
+
+  .event-card h3 a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+
+  .top8-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .top8-list li {
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.6;
+  }
+
+  .top8-list a {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.3);
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  }
+
+  .top8-list a:hover {
+    color: var(--color-accent);
+    text-decoration-color: var(--color-accent);
+  }
+</style>

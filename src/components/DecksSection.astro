@@ -1,4 +1,7 @@
 ---
+import EventCard from './EventCard.astro';
+import events from '../data/events.json';
+
 interface Deck {
   name: string;
   image: string;
@@ -28,149 +31,92 @@ const { decks } = Astro.props;
 
     <div class="video-section">
       <h4>Video Content</h4>
-      <div class="videos-grid">
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYE6Ybrx2UZwlX5e-7FAgxvc"
-            title="Legacy Playlist - Gameplay from 2016"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+      <div class="video-carousel">
+        <button class="carousel-btn carousel-prev" aria-label="Previous video">&lsaquo;</button>
+        <div class="video-carousel-container">
+          <div class="video-embed active" data-index="0">
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYE6Ybrx2UZwlX5e-7FAgxvc"
+              title="Legacy Playlist - Gameplay from 2016"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-embed" data-index="1">
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYGhxAFnmaSjlf8lVOR8iRCx"
+              title="Legacy Playlist 2 - Gameplay from 2016"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-embed" data-index="2">
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYFBp68ntNy2hA4eFHXXuspS"
+              title="Legacy Playlist 3 - Gameplay from 2016"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYGhxAFnmaSjlf8lVOR8iRCx"
-            title="Legacy Playlist 2 - Gameplay from 2016"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="video-embed">
-          <iframe
-            src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYFBp68ntNy2hA4eFHXXuspS"
-            title="Legacy Playlist 3 - Gameplay from 2016"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
+        <button class="carousel-btn carousel-next" aria-label="Next video">&rsaquo;</button>
+      </div>
+      <div class="carousel-indicators">
+        <button class="indicator active" data-index="0" aria-label="Video 1"></button>
+        <button class="indicator" data-index="1" aria-label="Video 2"></button>
+        <button class="indicator" data-index="2" aria-label="Video 3"></button>
       </div>
     </div>
 
-    <div class="gp-events">
-      <div class="gp-event">
-        <h3><a href="https://mtgtop8.com/event?e=12671&f=LE" target="_blank" rel="noopener noreferrer">GP Prague</a></h3>
-        <ul class="top8-list">
-          <li><a href="https://mtgtop8.com/event?e=12671&d=273451&f=LE" target="_blank" rel="noopener noreferrer">1. Rodrigo Togores - Storm</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12671&d=273452&f=LE" target="_blank" rel="noopener noreferrer">2. Nicolas Tholance - UW Miracles</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12671&d=273450&f=LE" target="_blank" rel="noopener noreferrer">3. Thomas Enevoldsen - Death & Taxes</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12671&d=273449&f=LE" target="_blank" rel="noopener noreferrer">4. Alexander Hayne - Grixis Delver</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12671&d=273417&f=LE" target="_blank" rel="noopener noreferrer">5. Gianluca Gazzola - Canadian Threshold</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12671&d=273418&f=LE" target="_blank" rel="noopener noreferrer">6. Arnaud Baglin - Grixis Delver</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12671&d=273447&f=LE" target="_blank" rel="noopener noreferrer">7. Lukas Blohon - Shardless BUG</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12671&d=273448&f=LE" target="_blank" rel="noopener noreferrer">8. Niels Molle - Show and Tell</a></li>
-        </ul>
-      </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const videos = document.querySelectorAll('.video-embed');
+        const indicators = document.querySelectorAll('.carousel-indicators .indicator');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+        let currentIndex = 0;
 
-      <div class="gp-event">
-        <h3><a href="https://mtgtop8.com/event?e=12681&f=LE" target="_blank" rel="noopener noreferrer">GP Columbus</a></h3>
-        <ul class="top8-list">
-          <li><a href="https://mtgtop8.com/event?e=12681&d=273542&f=LE" target="_blank" rel="noopener noreferrer">1. Clay Spicklemire - Berserk Poison</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12681&d=273541&f=LE" target="_blank" rel="noopener noreferrer">2. Joe Lossett - UW Miracles</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12681&d=273540&f=LE" target="_blank" rel="noopener noreferrer">3. Noah Walker - Grixis Delver</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12681&d=273539&f=LE" target="_blank" rel="noopener noreferrer">4. Christopher Walton - UW Miracles</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12681&d=273534&f=LE" target="_blank" rel="noopener noreferrer">5. Jarvis Yu - Lands</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12681&d=273533&f=LE" target="_blank" rel="noopener noreferrer">6. Raymond Cornely - Reanimator</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12681&d=273535&f=LE" target="_blank" rel="noopener noreferrer">7. Aaron Kasprzak - UW Miracles</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12681&d=273532&f=LE" target="_blank" rel="noopener noreferrer">8. Wilson Hunter - UW Miracles</a></li>
-        </ul>
-      </div>
+        function showVideo(index) {
+          videos.forEach((video, i) => {
+            video.classList.toggle('active', i === index);
+          });
+          indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+          });
+          currentIndex = index;
+        }
 
-      <div class="gp-event">
-        <h3><a href="https://mtgtop8.com/event?e=12947&f=LE" target="_blank" rel="noopener noreferrer">SCG Worcester</a></h3>
-        <ul class="top8-list">
-          <li><a href="https://mtgtop8.com/event?e=12947&d=275411&f=LE" target="_blank" rel="noopener noreferrer">1. Ed Dimicco - UR Delver</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12947&d=275410&f=LE" target="_blank" rel="noopener noreferrer">2. Kevin King - Lands</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12947&d=275434&f=LE" target="_blank" rel="noopener noreferrer">3. Rob Blocher - Dragon Stompy</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12947&d=275435&f=LE" target="_blank" rel="noopener noreferrer">4. Joe Lossett - UW Miracles</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12947&d=275433&f=LE" target="_blank" rel="noopener noreferrer">5. Ben Friedman - 4c Delver</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12947&d=275432&f=LE" target="_blank" rel="noopener noreferrer">6. Todd Stevens - Berserk Poison</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12947&d=275431&f=LE" target="_blank" rel="noopener noreferrer">7. Jeff Hoogland - Mono Red Sneak Attack</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12947&d=275430&f=LE" target="_blank" rel="noopener noreferrer">8. Jonathan Morawski - Reanimator</a></li>
-        </ul>
-      </div>
+        prevBtn.addEventListener('click', () => {
+          const newIndex = (currentIndex - 1 + videos.length) % videos.length;
+          showVideo(newIndex);
+        });
 
-      <div class="gp-event">
-        <h3><a href="https://mtgtop8.com/event?e=12908&f=LE" target="_blank" rel="noopener noreferrer">Bazaar of Moxen - Strasbourg</a></h3>
-        <ul class="top8-list">
-          <li><a href="https://mtgtop8.com/event?e=12908&d=275117&f=LE" target="_blank" rel="noopener noreferrer">1. Anton Karlinski - Eldrazi Aggro</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12908&d=275116&f=LE" target="_blank" rel="noopener noreferrer">2. Johannes Gutbord - UW Miracles</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12908&d=275115&f=LE" target="_blank" rel="noopener noreferrer">3. Bartl Sebastian - Elves</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12908&d=275114&f=LE" target="_blank" rel="noopener noreferrer">4. Kevin Sauvageon - Eldrazi Aggro</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12908&d=275113&f=LE" target="_blank" rel="noopener noreferrer">5. Pierre Canali - Shardless Oppo BUG</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12908&d=275112&f=LE" target="_blank" rel="noopener noreferrer">6. Gary Mialaret - UW Miracles</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12908&d=275110&f=LE" target="_blank" rel="noopener noreferrer">7. Locoge David - UR Delver</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12908&d=275111&f=LE" target="_blank" rel="noopener noreferrer">8. Niklas Holtmann - Shardless BUG</a></li>
-        </ul>
-      </div>
+        nextBtn.addEventListener('click', () => {
+          const newIndex = (currentIndex + 1) % videos.length;
+          showVideo(newIndex);
+        });
 
-      <div class="gp-event">
-        <h3><a href="https://mtgtop8.com/event?e=12863&f=LE" target="_blank" rel="noopener noreferrer">SCG Dallas</a></h3>
-        <ul class="top8-list">
-          <li><a href="https://mtgtop8.com/event?e=12863&d=274735&f=LE" target="_blank" rel="noopener noreferrer">1. Jarrod Feight - Death & Taxes</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12863&d=274730&f=LE" target="_blank" rel="noopener noreferrer">2. Ben Kendrick - Eldrazi Aggro</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12863&d=274728&f=LE" target="_blank" rel="noopener noreferrer">3. Mark Church - Death & Taxes</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12863&d=274729&f=LE" target="_blank" rel="noopener noreferrer">4. Patrick Vincent - Reanimator</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12863&d=274725&f=LE" target="_blank" rel="noopener noreferrer">5. Steven Fremin - Death & Taxes</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12863&d=274726&f=LE" target="_blank" rel="noopener noreferrer">6. Albert Huang - Doomsday</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12863&d=274724&f=LE" target="_blank" rel="noopener noreferrer">7. Keane Frady - Dredge</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12863&d=274727&f=LE" target="_blank" rel="noopener noreferrer">8. Russell Cooper - Lands</a></li>
-        </ul>
-      </div>
+        indicators.forEach((indicator) => {
+          indicator.addEventListener('click', () => {
+            const index = parseInt(indicator.dataset.index);
+            showVideo(index);
+          });
+        });
+      });
+    </script>
 
-      <div class="gp-event">
-        <h3><a href="https://mtgtop8.com/event?e=12303&f=LE" target="_blank" rel="noopener noreferrer">BoM Annecy</a></h3>
-        <ul class="top8-list">
-          <li><a href="https://mtgtop8.com/event?e=12303&d=270943&f=LE" target="_blank" rel="noopener noreferrer">1. Anton Karlinski - Eldrazi Aggro</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12303&d=270942&f=LE" target="_blank" rel="noopener noreferrer">2. Florian Stange - Belcher</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12303&d=270940&f=LE" target="_blank" rel="noopener noreferrer">3. Damien Uliana - ANT</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12303&d=270941&f=LE" target="_blank" rel="noopener noreferrer">4. Serafin Wellinger - UW Miracles</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12303&d=270937&f=LE" target="_blank" rel="noopener noreferrer">5. Carlos Moral - ANT</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12303&d=270936&f=LE" target="_blank" rel="noopener noreferrer">6. Guillaume Perbet - BUG Thing in the Ice</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12303&d=270939&f=LE" target="_blank" rel="noopener noreferrer">7. David Teze - Elfball Lands</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12303&d=270938&f=LE" target="_blank" rel="noopener noreferrer">8. Peter White - Grixis Delver</a></li>
-        </ul>
-      </div>
-
-      <div class="gp-event">
-        <h3><a href="https://mtgtop8.com/event?e=12433&f=LE" target="_blank" rel="noopener noreferrer">MKM Frankfurt</a></h3>
-        <ul class="top8-list">
-          <li><a href="https://mtgtop8.com/event?e=12433&d=271510&f=LE" target="_blank" rel="noopener noreferrer">1. Niklas Kronberger - Loam</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12433&d=271511&f=LE" target="_blank" rel="noopener noreferrer">2. Fabian Görzgen - Maverick</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12433&d=271509&f=LE" target="_blank" rel="noopener noreferrer">3. Niklas Holtmann - Elves</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12433&d=271508&f=LE" target="_blank" rel="noopener noreferrer">4. David Raabe - Storm</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12433&d=271512&f=LE" target="_blank" rel="noopener noreferrer">5. Amadeus Kurz - BUG Midrange</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12433&d=271513&f=LE" target="_blank" rel="noopener noreferrer">6. Jonas Zimmermann - Nic Fit</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12433&d=271514&f=LE" target="_blank" rel="noopener noreferrer">7. Felix Höfler - Stoneblade</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12433&d=271515&f=LE" target="_blank" rel="noopener noreferrer">8. Stefan Schütz - UW Miracles</a></li>
-        </ul>
-      </div>
-
-      <div class="gp-event">
-        <h3><a href="https://mtgtop8.com/event?e=12443&f=LE" target="_blank" rel="noopener noreferrer">SCG Indianapolis</a></h3>
-        <ul class="top8-list">
-          <li><a href="https://mtgtop8.com/event?e=12443&d=271580&f=LE" target="_blank" rel="noopener noreferrer">1. Clay Spicklemire - Infect</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12443&d=271579&f=LE" target="_blank" rel="noopener noreferrer">2. Robert Cucunato - Reanimator</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12443&d=271578&f=LE" target="_blank" rel="noopener noreferrer">3. Riley Curran - Elves</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12443&d=271577&f=LE" target="_blank" rel="noopener noreferrer">4. Jon Lenz - Goblins</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12443&d=271591&f=LE" target="_blank" rel="noopener noreferrer">5. Matthew Tickal - Miracles</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12443&d=271592&f=LE" target="_blank" rel="noopener noreferrer">6. Isaac Siegmund - Storm</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12443&d=271584&f=LE" target="_blank" rel="noopener noreferrer">7. Jim Davis - Sultai Delver</a></li>
-          <li><a href="https://mtgtop8.com/event?e=12443&d=271583&f=LE" target="_blank" rel="noopener noreferrer">8. Michael Finnegan - Tinfins</a></li>
-        </ul>
-      </div>
+    <div class="events-grid">
+      {events.map(event => (
+        <EventCard
+          name={event.name}
+          eventId={event.eventId}
+          url={event.url}
+          top8={event.top8}
+        />
+      ))}
     </div>
 
     <div class="articles-section">
@@ -187,7 +133,7 @@ const { decks } = Astro.props;
 </section>
 
 <style>
-  .gp-events {
+  .events-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
@@ -196,55 +142,9 @@ const { decks } = Astro.props;
   }
 
   @media (min-width: 768px) {
-    .gp-events {
+    .events-grid {
       grid-template-columns: 1fr 1fr;
     }
-  }
-
-  .gp-event {
-    background: rgba(255, 255, 255, 0.5);
-    padding: var(--spacing-md);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  .gp-event h3 {
-    margin-bottom: var(--spacing-sm);
-    font-size: 1.3rem;
-    color: var(--color-accent-dark);
-  }
-
-  .gp-event h3 a {
-    color: var(--color-accent-dark);
-    text-decoration: none;
-  }
-
-  .gp-event h3 a:hover {
-    color: var(--color-accent);
-    text-decoration: underline;
-  }
-
-  .top8-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .top8-list li {
-    margin-bottom: var(--spacing-xs);
-    line-height: 1.6;
-  }
-
-  .top8-list a {
-    color: var(--color-text);
-    text-decoration: underline;
-    text-decoration-color: rgba(0, 0, 0, 0.3);
-    transition: color 0.2s ease, text-decoration-color 0.2s ease;
-  }
-
-  .top8-list a:hover {
-    color: var(--color-accent);
-    text-decoration-color: var(--color-accent);
   }
 
   .articles-section {
@@ -291,24 +191,28 @@ const { decks } = Astro.props;
 
   .video-section {
     margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
   }
 
   .video-section h4 {
     margin-bottom: var(--spacing-md);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--color-text);
   }
 
-  .videos-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+  .video-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
-  @media (min-width: 768px) {
-    .videos-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+  .video-carousel-container {
+    position: relative;
+    width: 100%;
+    flex: 1;
   }
 
   .video-embed {
@@ -317,7 +221,12 @@ const { decks } = Astro.props;
     height: 0;
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: none;
+  }
+
+  .video-embed.active {
+    display: block;
   }
 
   .video-embed iframe {
@@ -327,6 +236,75 @@ const { decks } = Astro.props;
     width: 100%;
     height: 100%;
     border-radius: 8px;
+  }
+
+  .carousel-btn {
+    background: var(--color-accent);
+    border: none;
+    color: white;
+    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+    line-height: 1;
+    padding: 0;
+  }
+
+  .carousel-btn:hover {
+    background: var(--color-accent-dark);
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .carousel-btn:active {
+    transform: scale(0.95);
+  }
+
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+  }
+
+  .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--color-accent);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .indicator.active {
+    background: var(--color-accent);
+    transform: scale(1.2);
+  }
+
+  .indicator:hover {
+    background: var(--color-accent-dark);
+    border-color: var(--color-accent-dark);
+  }
+
+  @media (max-width: 768px) {
+    .carousel-btn {
+      width: 50px;
+      height: 50px;
+      font-size: 2rem;
+    }
+
+    .video-carousel {
+      gap: var(--spacing-sm);
+    }
   }
 
   .deck-photos-section {
