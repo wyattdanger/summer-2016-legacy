@@ -1,0 +1,688 @@
+[
+  {
+    "code": "lea",
+    "name": "Limited Edition Alpha",
+    "released_at": "1993-08-05",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/lea.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "leb",
+    "name": "Limited Edition Beta",
+    "released_at": "1993-10-04",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/leb.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "2ed",
+    "name": "Unlimited Edition",
+    "released_at": "1993-12-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/2ed.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "arn",
+    "name": "Arabian Nights",
+    "released_at": "1993-12-17",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/arn.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "atq",
+    "name": "Antiquities",
+    "released_at": "1994-03-04",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/atq.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "fbb",
+    "name": "Foreign Black Border",
+    "released_at": "1994-04-11",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/3ed.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "3ed",
+    "name": "Revised Edition",
+    "released_at": "1994-04-11",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/3ed.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "leg",
+    "name": "Legends",
+    "released_at": "1994-06-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/leg.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "sum",
+    "name": "Summer Magic / Edgar",
+    "released_at": "1994-06-21",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/psum.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "drk",
+    "name": "The Dark",
+    "released_at": "1994-08-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/drk.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "fem",
+    "name": "Fallen Empires",
+    "released_at": "1994-11-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/fem.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "4bb",
+    "name": "Fourth Edition Foreign Black Border",
+    "released_at": "1995-04-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/4ed.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "4ed",
+    "name": "Fourth Edition",
+    "released_at": "1995-04-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/4ed.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "ice",
+    "name": "Ice Age",
+    "released_at": "1995-06-03",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/ice.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "hml",
+    "name": "Homelands",
+    "released_at": "1995-10-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/hml.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "all",
+    "name": "Alliances",
+    "released_at": "1996-06-10",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/all.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "mir",
+    "name": "Mirage",
+    "released_at": "1996-10-08",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/mir.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "vis",
+    "name": "Visions",
+    "released_at": "1997-02-03",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/vis.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "5ed",
+    "name": "Fifth Edition",
+    "released_at": "1997-03-24",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/5ed.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "wth",
+    "name": "Weatherlight",
+    "released_at": "1997-06-09",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/wth.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "tmp",
+    "name": "Tempest",
+    "released_at": "1997-10-14",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/tmp.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "sth",
+    "name": "Stronghold",
+    "released_at": "1998-03-02",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/sth.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "exo",
+    "name": "Exodus",
+    "released_at": "1998-06-15",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/exo.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "usg",
+    "name": "Urza's Saga",
+    "released_at": "1998-10-12",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/usg.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "ulg",
+    "name": "Urza's Legacy",
+    "released_at": "1999-02-15",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/ulg.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "6ed",
+    "name": "Classic Sixth Edition",
+    "released_at": "1999-04-21",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/6ed.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "uds",
+    "name": "Urza's Destiny",
+    "released_at": "1999-06-07",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/uds.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "mmq",
+    "name": "Mercadian Masques",
+    "released_at": "1999-10-04",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/mmq.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "nem",
+    "name": "Nemesis",
+    "released_at": "2000-02-14",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/nem.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "pcy",
+    "name": "Prophecy",
+    "released_at": "2000-06-05",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/pcy.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "inv",
+    "name": "Invasion",
+    "released_at": "2000-10-02",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/inv.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "pls",
+    "name": "Planeshift",
+    "released_at": "2001-02-05",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/pls.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "7ed",
+    "name": "Seventh Edition",
+    "released_at": "2001-04-11",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/7ed.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "apc",
+    "name": "Apocalypse",
+    "released_at": "2001-06-04",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/apc.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "ody",
+    "name": "Odyssey",
+    "released_at": "2001-10-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/ody.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "tor",
+    "name": "Torment",
+    "released_at": "2002-02-04",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/tor.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "jud",
+    "name": "Judgment",
+    "released_at": "2002-05-27",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/jud.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "ons",
+    "name": "Onslaught",
+    "released_at": "2002-10-07",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/ons.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "lgn",
+    "name": "Legions",
+    "released_at": "2003-02-03",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/lgn.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "scg",
+    "name": "Scourge",
+    "released_at": "2003-05-26",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/scg.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "8ed",
+    "name": "Eighth Edition",
+    "released_at": "2003-07-28",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/8ed.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "mrd",
+    "name": "Mirrodin",
+    "released_at": "2003-10-02",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/mrd.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "dst",
+    "name": "Darksteel",
+    "released_at": "2004-02-06",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/dst.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "5dn",
+    "name": "Fifth Dawn",
+    "released_at": "2004-06-04",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/5dn.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "chk",
+    "name": "Champions of Kamigawa",
+    "released_at": "2004-10-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/chk.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "bok",
+    "name": "Betrayers of Kamigawa",
+    "released_at": "2005-02-04",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/bok.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "sok",
+    "name": "Saviors of Kamigawa",
+    "released_at": "2005-06-03",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/sok.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "9ed",
+    "name": "Ninth Edition",
+    "released_at": "2005-07-29",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/9ed.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "rav",
+    "name": "Ravnica: City of Guilds",
+    "released_at": "2005-10-07",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/rav.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "gpt",
+    "name": "Guildpact",
+    "released_at": "2006-02-03",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/gpt.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "dis",
+    "name": "Dissension",
+    "released_at": "2006-05-05",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/dis.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "csp",
+    "name": "Coldsnap",
+    "released_at": "2006-07-21",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/csp.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "tsp",
+    "name": "Time Spiral",
+    "released_at": "2006-10-06",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/tsp.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "tsb",
+    "name": "Time Spiral Timeshifted",
+    "released_at": "2006-10-06",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/tsp.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "plc",
+    "name": "Planar Chaos",
+    "released_at": "2007-02-02",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/plc.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "fut",
+    "name": "Future Sight",
+    "released_at": "2007-05-04",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/fut.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "10e",
+    "name": "Tenth Edition",
+    "released_at": "2007-07-13",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/10e.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "lrw",
+    "name": "Lorwyn",
+    "released_at": "2007-10-12",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/lrw.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "mor",
+    "name": "Morningtide",
+    "released_at": "2008-02-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/mor.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "shm",
+    "name": "Shadowmoor",
+    "released_at": "2008-05-02",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/shm.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "eve",
+    "name": "Eventide",
+    "released_at": "2008-07-25",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/eve.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "ala",
+    "name": "Shards of Alara",
+    "released_at": "2008-10-03",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/ala.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "con",
+    "name": "Conflux",
+    "released_at": "2009-02-06",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/con.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "arb",
+    "name": "Alara Reborn",
+    "released_at": "2009-04-30",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/arb.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "m10",
+    "name": "Magic 2010",
+    "released_at": "2009-07-17",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/m10.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "zen",
+    "name": "Zendikar",
+    "released_at": "2009-10-02",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/zen.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "wwk",
+    "name": "Worldwake",
+    "released_at": "2010-02-05",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/wwk.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "roe",
+    "name": "Rise of the Eldrazi",
+    "released_at": "2010-04-23",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/roe.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "m11",
+    "name": "Magic 2011",
+    "released_at": "2010-07-16",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/m11.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "som",
+    "name": "Scars of Mirrodin",
+    "released_at": "2010-10-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/som.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "mbs",
+    "name": "Mirrodin Besieged",
+    "released_at": "2011-02-04",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/mbs.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "nph",
+    "name": "New Phyrexia",
+    "released_at": "2011-05-13",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/nph.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "cmd",
+    "name": "Commander 2011",
+    "released_at": "2011-06-17",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/cmd.svg?1782100800",
+    "set_type": "commander"
+  },
+  {
+    "code": "m12",
+    "name": "Magic 2012",
+    "released_at": "2011-07-15",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/m12.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "isd",
+    "name": "Innistrad",
+    "released_at": "2011-09-30",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/isd.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "dka",
+    "name": "Dark Ascension",
+    "released_at": "2012-02-03",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/dka.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "avr",
+    "name": "Avacyn Restored",
+    "released_at": "2012-05-04",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/avr.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "m13",
+    "name": "Magic 2013",
+    "released_at": "2012-07-13",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/m13.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "rtr",
+    "name": "Return to Ravnica",
+    "released_at": "2012-10-05",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/rtr.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "cm1",
+    "name": "Commander's Arsenal",
+    "released_at": "2012-11-02",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/cm1.svg?1782100800",
+    "set_type": "arsenal"
+  },
+  {
+    "code": "gtc",
+    "name": "Gatecrash",
+    "released_at": "2013-02-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/gtc.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "dgm",
+    "name": "Dragon's Maze",
+    "released_at": "2013-05-03",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/dgm.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "m14",
+    "name": "Magic 2014",
+    "released_at": "2013-07-19",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/m14.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "ths",
+    "name": "Theros",
+    "released_at": "2013-09-27",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/ths.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "c13",
+    "name": "Commander 2013",
+    "released_at": "2013-11-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/c13.svg?1782100800",
+    "set_type": "commander"
+  },
+  {
+    "code": "bng",
+    "name": "Born of the Gods",
+    "released_at": "2014-02-07",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/bng.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "jou",
+    "name": "Journey into Nyx",
+    "released_at": "2014-05-02",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/jou.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "m15",
+    "name": "Magic 2015",
+    "released_at": "2014-07-18",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/m15.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "ktk",
+    "name": "Khans of Tarkir",
+    "released_at": "2014-09-26",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/ktk.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "c14",
+    "name": "Commander 2014",
+    "released_at": "2014-11-07",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/c14.svg?1782100800",
+    "set_type": "commander"
+  },
+  {
+    "code": "frf",
+    "name": "Fate Reforged",
+    "released_at": "2015-01-23",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/frf.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "dtk",
+    "name": "Dragons of Tarkir",
+    "released_at": "2015-03-27",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/dtk.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "ori",
+    "name": "Magic Origins",
+    "released_at": "2015-07-17",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/ori.svg?1782100800",
+    "set_type": "core"
+  },
+  {
+    "code": "bfz",
+    "name": "Battle for Zendikar",
+    "released_at": "2015-10-02",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/bfz.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "c15",
+    "name": "Commander 2015",
+    "released_at": "2015-11-13",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/c15.svg?1782100800",
+    "set_type": "commander"
+  },
+  {
+    "code": "ogw",
+    "name": "Oath of the Gatewatch",
+    "released_at": "2016-01-22",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/ogw.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "soi",
+    "name": "Shadows over Innistrad",
+    "released_at": "2016-04-08",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/soi.svg?1782100800",
+    "set_type": "expansion"
+  },
+  {
+    "code": "emn",
+    "name": "Eldritch Moon",
+    "released_at": "2016-07-22",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/emn.svg?1782100800",
+    "set_type": "expansion"
+  }
+]

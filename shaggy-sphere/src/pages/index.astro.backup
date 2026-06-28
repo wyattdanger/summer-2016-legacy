@@ -1,0 +1,973 @@
+---
+// 2016 Legacy Format Homepage
+const FORMAT_NAME = "Pre-Brexit Legacy";
+const FORMAT_YEAR = "2016";
+
+// Import legal sets data
+import legalSets from '../data/legal-sets.json';
+import bannedCards from '../data/banned-cards.json';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{FORMAT_NAME} | MTG Format</title>
+		<meta name="description" content={`A Magic: The Gathering format celebrating the Legacy format as it existed in ${FORMAT_YEAR}, with sets legal through Eldritch Moon.`} />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="container">
+					<h1 class="site-title">{FORMAT_NAME}</h1>
+					<ul class="nav-links">
+						<li><a href="#about">About</a></li>
+						<li><a href="#philosophy">Philosophy</a></li>
+						<li><a href="#legal-sets">Legal Sets</a></li>
+						<li><a href="#banlist">Banlist</a></li>
+						<li><a href="#decks">Decks</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<!-- Hero Section -->
+			<section class="hero">
+				<div class="container">
+					<h2>{FORMAT_NAME}</h2>
+					<p class="tagline">Legacy as it was in {FORMAT_YEAR}</p>
+					<p class="intro">
+						An unofficial Magic: The Gathering format with sets legal through <strong>Eldritch Moon</strong> (July {FORMAT_YEAR}).
+					</p>
+				</div>
+			</section>
+
+			<!-- About Section -->
+			<section id="about" class="section">
+				<div class="container">
+					<h2>About the Format</h2>
+					<p>
+						This format captures the epic double GP Legacy events that were in the same weekend with Rodrigo Togores taking down <a href="https://mtgtop8.com/event?e=12671&f=LE" target="_blank" rel="noopener noreferrer">GP Prague</a> and Clay Spicklemire winning <a href="https://www.mtgtop8.com/event?e=12681&f=LE" target="_blank" rel="noopener noreferrer">GP Columbus</a>.
+					</p>
+					<p>
+						{FORMAT_NAME} is a snapshot of the format before later expansions and bans changed
+						things. It's Legacy as it existed in mid-{FORMAT_YEAR}.
+					</p>
+					<p>
+						The format ends at <strong>Eldritch Moon (July {FORMAT_YEAR})</strong>, just before
+						Conspiracy: Take the Crown. This keeps the focus on 1v1 gameplay.
+					</p>
+				</div>
+			</section>
+
+			<!-- Philosophy Section -->
+			<section id="philosophy" class="section section-alt">
+				<div class="container">
+					<h2>Philosophy</h2>
+					<p>
+						Play to have fun, not just to win. Be a good sport.
+					</p>
+					<p>
+						Don't do this stuff:
+					</p>
+					<ul>
+						<li>Being rude to opponents</li>
+						<li>Exploiting rules for unfair advantages</li>
+						<li>Making the game less fun for others</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Legal Sets Section -->
+			<section id="legal-sets" class="section">
+				<div class="container">
+					<h2>Legal Sets</h2>
+					<p class="section-intro">
+						All Magic: The Gathering sets released from <strong>Limited Edition Alpha</strong>
+						through <strong>Eldritch Moon (July 2016)</strong> are legal in this format.
+					</p>
+
+					<div class="set-symbols-grid">
+						{legalSets.map(set => (
+							<div class="set-symbol-item" title={`${set.name} (${set.released_at})`}>
+								<img src={set.icon_svg_uri} alt={set.name} />
+								<span class="set-name">{set.name}</span>
+							</div>
+						))}
+					</div>
+
+					<div class="sets-grid" style="display: none;">
+						<div class="set-category">
+							<h3>Early Sets (1993-1995)</h3>
+							<ul>
+								<li>Limited Edition Alpha</li>
+								<li>Limited Edition Beta</li>
+								<li>Unlimited Edition</li>
+								<li>Arabian Nights</li>
+								<li>Antiquities</li>
+								<li>Legends</li>
+								<li>The Dark</li>
+								<li>Fallen Empires</li>
+								<li>Ice Age</li>
+								<li>Homelands</li>
+								<li>Alliances</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Mirage Block (1996-1997)</h3>
+							<ul>
+								<li>Mirage</li>
+								<li>Visions</li>
+								<li>Weatherlight</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Tempest Block (1997-1998)</h3>
+							<ul>
+								<li>Tempest</li>
+								<li>Stronghold</li>
+								<li>Exodus</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Urza Block (1998-1999)</h3>
+							<ul>
+								<li>Urza's Saga</li>
+								<li>Urza's Legacy</li>
+								<li>Urza's Destiny</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Masques Block (1999-2001)</h3>
+							<ul>
+								<li>Mercadian Masques</li>
+								<li>Nemesis</li>
+								<li>Prophecy</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Invasion Block (2000-2001)</h3>
+							<ul>
+								<li>Invasion</li>
+								<li>Planeshift</li>
+								<li>Apocalypse</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Odyssey Block (2001-2002)</h3>
+							<ul>
+								<li>Odyssey</li>
+								<li>Torment</li>
+								<li>Judgment</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Onslaught Block (2002-2003)</h3>
+							<ul>
+								<li>Onslaught</li>
+								<li>Legions</li>
+								<li>Scourge</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Mirrodin Block (2003-2004)</h3>
+							<ul>
+								<li>Mirrodin</li>
+								<li>Darksteel</li>
+								<li>Fifth Dawn</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Kamigawa Block (2004-2005)</h3>
+							<ul>
+								<li>Champions of Kamigawa</li>
+								<li>Betrayers of Kamigawa</li>
+								<li>Saviors of Kamigawa</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Ravnica Block (2005-2006)</h3>
+							<ul>
+								<li>Ravnica: City of Guilds</li>
+								<li>Guildpact</li>
+								<li>Dissension</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Time Spiral Block (2006-2007)</h3>
+							<ul>
+								<li>Time Spiral</li>
+								<li>Planar Chaos</li>
+								<li>Future Sight</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Lorwyn-Shadowmoor (2007-2008)</h3>
+							<ul>
+								<li>Lorwyn</li>
+								<li>Morningtide</li>
+								<li>Shadowmoor</li>
+								<li>Eventide</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Alara Block (2008-2009)</h3>
+							<ul>
+								<li>Shards of Alara</li>
+								<li>Conflux</li>
+								<li>Alara Reborn</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Zendikar Block (2009-2010)</h3>
+							<ul>
+								<li>Zendikar</li>
+								<li>Worldwake</li>
+								<li>Rise of the Eldrazi</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Scars of Mirrodin Block (2010-2011)</h3>
+							<ul>
+								<li>Scars of Mirrodin</li>
+								<li>Mirrodin Besieged</li>
+								<li>New Phyrexia</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Innistrad Block (2011-2012)</h3>
+							<ul>
+								<li>Innistrad</li>
+								<li>Dark Ascension</li>
+								<li>Avacyn Restored</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Return to Ravnica Block (2012-2013)</h3>
+							<ul>
+								<li>Return to Ravnica</li>
+								<li>Gatecrash</li>
+								<li>Dragon's Maze</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Theros Block (2013-2014)</h3>
+							<ul>
+								<li>Theros</li>
+								<li>Born of the Gods</li>
+								<li>Journey into Nyx</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Khans of Tarkir Block (2014-2015)</h3>
+							<ul>
+								<li>Khans of Tarkir</li>
+								<li>Fate Reforged</li>
+								<li>Dragons of Tarkir</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Battle for Zendikar Block (2015-2016)</h3>
+							<ul>
+								<li>Battle for Zendikar</li>
+								<li>Oath of the Gatewatch</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Shadows Over Innistrad Block (2016)</h3>
+							<ul>
+								<li>Shadows over Innistrad</li>
+								<li>Eldritch Moon</li>
+							</ul>
+						</div>
+
+						<div class="set-category">
+							<h3>Core Sets</h3>
+							<ul>
+								<li>Fourth Edition (1995)</li>
+								<li>Fifth Edition (1997)</li>
+								<li>Sixth Edition (1999)</li>
+								<li>Seventh Edition (2001)</li>
+								<li>Eighth Edition (2003)</li>
+								<li>Ninth Edition (2005)</li>
+								<li>Tenth Edition (2007)</li>
+								<li>Magic 2010 (2009)</li>
+								<li>Magic 2011 (2010)</li>
+								<li>Magic 2012 (2011)</li>
+								<li>Magic 2013 (2012)</li>
+								<li>Magic 2014 (2013)</li>
+								<li>Magic 2015 (2014)</li>
+								<li>Magic Origins (2015)</li>
+							</ul>
+						</div>
+					</div>
+
+					<p class="note">
+						<strong>Note:</strong> Conspiracy and Conspiracy: Take the Crown are NOT legal
+						in this format to maintain focus on 1v1 gameplay.
+					</p>
+				</div>
+			</section>
+
+			<!-- Banlist Section -->
+			<section id="banlist" class="section section-alt">
+				<div class="container">
+					<h2>Banned Cards</h2>
+					<p class="section-intro">
+						These cards are banned in {FORMAT_NAME}, based on the official Legacy banlist
+						from mid-{FORMAT_YEAR}.
+					</p>
+
+					<div class="banned-cards-grid">
+						<ul>
+							<li>Ancestral Recall</li>
+							<li>Balance</li>
+							<li>Bazaar of Baghdad</li>
+							<li>Black Lotus</li>
+							<li>Bronze Tablet</li>
+							<li>Channel</li>
+							<li>Chaos Orb</li>
+							<li>Contract from Below</li>
+							<li>Darkpact</li>
+							<li>Demonic Consultation</li>
+							<li>Earthcraft</li>
+							<li>Falling Star</li>
+							<li>Fastbond</li>
+							<li>Goblin Recruiter</li>
+							<li>Hermit Druid</li>
+							<li>Imperial Seal</li>
+							<li>Jeweled Bird</li>
+							<li>Library of Alexandria</li>
+							<li>Mana Crypt</li>
+							<li>Mana Vault</li>
+							<li>Mind Twist</li>
+							<li>Mind's Desire</li>
+							<li>Mox Emerald</li>
+							<li>Mox Jet</li>
+							<li>Mox Pearl</li>
+							<li>Mox Ruby</li>
+							<li>Mox Sapphire</li>
+							<li>Rebirth</li>
+							<li>Shahrazad</li>
+							<li>Skullclamp</li>
+							<li>Sol Ring</li>
+							<li>Strip Mine</li>
+							<li>Survival of the Fittest</li>
+							<li>Tempest Efreet</li>
+							<li>Time Walk</li>
+							<li>Timmerian Fiends</li>
+							<li>Timetwister</li>
+							<li>Vampiric Tutor</li>
+							<li>Windfall</li>
+							<li>Yawgmoth's Bargain</li>
+							<li>Yawgmoth's Will</li>
+						</ul>
+					</div>
+
+					<p class="note">
+						<strong>Note:</strong> Cards like Sensei's Divining Top and Deathrite Shaman
+						are legal—they weren't banned until later.
+					</p>
+				</div>
+			</section>
+
+			<!-- Decks Section -->
+			<section id="decks" class="section">
+				<div class="container">
+					<h2>Decks</h2>
+					<p class="section-intro">
+						Decks from {FORMAT_NAME}. More coming soon.
+					</p>
+
+					<div class="deck-photos">
+						<p class="placeholder-text">Deck photos go here.</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<div class="container">
+				<p>
+					An unofficial fan format.
+				</p>
+				<p class="disclaimer">
+					Magic: The Gathering is trademark and copyright Wizards of the Coast, Inc.
+					This site is not affiliated with Wizards of the Coast.
+				</p>
+			</div>
+		</footer>
+
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			:root {
+				/* Instagram palm tree filter palette - from reference image */
+				--color-bg: #f4e8d8;
+				--color-bg-alt: #fdf6ec;
+				--color-card: #fffbf2;
+				--color-text: #4a3820;
+				--color-text-muted: #8d7558;
+				--color-accent: #d97e54;
+				--color-accent-dark: #c16d47;
+				--color-sunset-orange: #e8a76a;
+				--color-sunset-pink: #d97b8f;
+				--color-sunset-purple: #8b6d9c;
+				--color-border: #d9c9ad;
+
+				/* Cool tones from the sky and shadows */
+				--color-sky-blue: #7ea5c9;
+				--color-sky-deep: #5d8ab8;
+				--color-tree-green: #88a186;
+				--color-sage: #a1b097;
+				--color-dusk-blue: #8691a8;
+				--color-palm-shadow: #6d5575;
+
+				/* Derived colors with opacity for overlays and effects */
+				--overlay-orange-light: rgba(232, 167, 106, 0.1);
+				--overlay-pink-light: rgba(217, 123, 143, 0.1);
+				--overlay-purple-light: rgba(139, 109, 156, 0.1);
+				--overlay-orange-medium: rgba(217, 126, 84, 0.3);
+				--overlay-pink-medium: rgba(217, 123, 143, 0.2);
+				--overlay-purple-medium: rgba(139, 109, 156, 0.3);
+				--overlay-orange-subtle: rgba(217, 126, 84, 0.05);
+				--overlay-pink-subtle: rgba(217, 123, 143, 0.05);
+				--overlay-purple-subtle: rgba(109, 85, 117, 0.05);
+				--overlay-orange-strong: rgba(217, 126, 84, 0.15);
+				--overlay-pink-strong: rgba(217, 123, 143, 0.15);
+				--overlay-purple-strong: rgba(139, 109, 156, 0.15);
+
+				/* Cool tone overlays - sky and palm shadows */
+				--overlay-blue-light: rgba(126, 165, 201, 0.1);
+				--overlay-blue-medium: rgba(93, 138, 184, 0.15);
+				--overlay-blue-subtle: rgba(126, 165, 201, 0.05);
+				--overlay-green-light: rgba(136, 161, 134, 0.1);
+				--overlay-green-medium: rgba(136, 161, 134, 0.15);
+				--overlay-sage-subtle: rgba(161, 176, 151, 0.08);
+
+				/* Card and container backgrounds */
+				--card-bg: rgba(255, 249, 240, 0.7);
+				--card-bg-alt: rgba(255, 255, 255, 0.6);
+				--card-bg-hover: rgba(255, 249, 240, 0.5);
+
+				/* Shadow colors */
+				--shadow-orange: rgba(212, 131, 92, 0.08);
+				--shadow-orange-hover: rgba(212, 131, 92, 0.15);
+				--shadow-pink: rgba(217, 123, 145, 0.08);
+				--shadow-pink-strong: rgba(217, 123, 145, 0.1);
+
+				/* Special effect colors */
+				--noise-overlay: rgba(212, 131, 92, 0.03);
+				--gradient-overlay-1: rgba(233, 155, 109, 0.05);
+				--gradient-overlay-2: rgba(217, 123, 145, 0.03);
+				--gradient-overlay-3: rgba(155, 123, 168, 0.05);
+				--white-soft: rgba(255, 255, 255, 0.5);
+				--white-glow: rgba(255, 255, 255, 0.7);
+				--section-gradient-top: rgba(255, 255, 255, 0.3);
+				--section-gradient-bottom: rgba(250, 243, 235, 0.5);
+
+				/* Spacing */
+				--spacing-xs: 0.5rem;
+				--spacing-sm: 1rem;
+				--spacing-md: 2rem;
+				--spacing-lg: 3rem;
+				--spacing-xl: 4rem;
+				--max-width: 1200px;
+			}
+
+			body {
+				font-family: 'Georgia', 'Times New Roman', serif;
+				line-height: 1.7;
+				color: var(--color-text);
+				background-color: var(--color-bg);
+				background-image:
+					radial-gradient(circle at 20% 50%, var(--overlay-orange-light) 0%, transparent 50%),
+					radial-gradient(circle at 80% 20%, var(--overlay-blue-light) 0%, transparent 50%),
+					radial-gradient(circle at 80% 80%, var(--overlay-pink-light) 0%, transparent 50%),
+					radial-gradient(circle at 10% 90%, var(--overlay-green-light) 0%, transparent 50%),
+					url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+				position: relative;
+			}
+
+			body::before {
+				content: '';
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: linear-gradient(180deg,
+					var(--overlay-blue-subtle) 0%,
+					var(--gradient-overlay-1) 25%,
+					var(--gradient-overlay-2) 50%,
+					var(--overlay-sage-subtle) 75%,
+					var(--gradient-overlay-3) 100%);
+				pointer-events: none;
+				z-index: -1;
+			}
+
+			/* Header & Navigation */
+			header {
+				background: linear-gradient(135deg,
+					rgba(253, 246, 236, 0.95) 0%,
+					rgba(244, 232, 216, 0.95) 100%);
+				backdrop-filter: blur(20px) saturate(180%);
+				border-bottom: 3px solid var(--color-accent);
+				position: sticky;
+				top: 0;
+				z-index: 100;
+				box-shadow: 0 4px 24px rgba(217, 126, 84, 0.12);
+			}
+
+			nav {
+				padding: var(--spacing-sm) 0;
+			}
+
+			nav .container {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
+				flex-wrap: wrap;
+				gap: var(--spacing-sm);
+			}
+
+			.site-title {
+				font-size: 1.75rem;
+				font-weight: 400;
+				font-family: 'Georgia', serif;
+				color: var(--color-accent-dark);
+				text-shadow: 1px 1px 2px var(--white-soft);
+				letter-spacing: 0.5px;
+			}
+
+			.nav-links {
+				display: flex;
+				list-style: none;
+				gap: 1.5rem;
+				flex-wrap: wrap;
+				margin: 0;
+				padding: 0;
+			}
+
+			.nav-links a {
+				color: var(--color-text-muted);
+				text-decoration: none;
+				font-weight: 400;
+				font-family: 'Georgia', serif;
+				font-size: 0.95rem;
+				transition: all 0.3s ease;
+				padding: 0.25rem 0;
+				border-bottom: 2px solid transparent;
+				letter-spacing: 0.3px;
+			}
+
+			.nav-links a:hover {
+				color: var(--color-accent-dark);
+				border-bottom-color: var(--color-sunset-orange);
+			}
+
+			/* Container */
+			.container {
+				max-width: var(--max-width);
+				margin: 0 auto;
+				padding: 0 var(--spacing-md);
+			}
+
+			/* Sections */
+			.section {
+				padding: var(--spacing-xl) 0;
+			}
+
+			.section-alt {
+				background: linear-gradient(to bottom,
+					var(--overlay-sage-subtle) 0%,
+					var(--section-gradient-top) 50%,
+					var(--section-gradient-bottom) 100%);
+			}
+
+			.hero {
+				padding: calc(var(--spacing-xl) * 1.5) 0;
+				text-align: center;
+				background: linear-gradient(135deg,
+					var(--overlay-orange-strong) 0%,
+					var(--overlay-pink-light) 50%,
+					var(--overlay-purple-strong) 100%);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.hero::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-image:
+					repeating-linear-gradient(90deg, transparent, transparent 2px, var(--noise-overlay) 2px, var(--noise-overlay) 4px);
+				pointer-events: none;
+			}
+
+			.hero h2 {
+				font-size: 3rem;
+				margin-bottom: var(--spacing-sm);
+				color: var(--color-accent-dark);
+				font-weight: 400;
+				text-shadow: 2px 2px 4px var(--white-soft);
+				letter-spacing: 1px;
+			}
+
+			.tagline {
+				font-size: 1.4rem;
+				color: var(--color-sunset-pink);
+				margin-bottom: var(--spacing-md);
+				font-style: italic;
+				font-weight: 300;
+				text-shadow: 1px 1px 2px var(--white-glow);
+			}
+
+			.intro {
+				font-size: 1.15rem;
+				max-width: 800px;
+				margin: 0 auto;
+				line-height: 1.8;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			}
+
+			h2 {
+				font-size: 2.25rem;
+				margin-bottom: var(--spacing-md);
+				color: var(--color-accent-dark);
+				font-weight: 400;
+				letter-spacing: 0.5px;
+				text-shadow: 1px 1px 2px var(--white-soft);
+			}
+
+			h3 {
+				font-size: 1.4rem;
+				margin-bottom: var(--spacing-sm);
+				color: var(--color-text);
+				font-weight: 400;
+			}
+
+			p {
+				margin-bottom: var(--spacing-sm);
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			}
+
+			a {
+				color: var(--color-sky-deep);
+				text-decoration: underline;
+				text-decoration-color: var(--color-sky-blue);
+				text-decoration-thickness: 2px;
+				text-underline-offset: 2px;
+				transition: all 0.2s ease;
+			}
+
+			a:hover {
+				color: var(--color-accent-dark);
+				text-decoration-color: var(--color-sunset-orange);
+			}
+
+			strong a {
+				font-weight: inherit;
+			}
+
+			.section-intro {
+				font-size: 1.15rem;
+				margin-bottom: var(--spacing-md);
+				color: var(--color-text-muted);
+				font-style: italic;
+			}
+
+			/* Lists */
+			ul {
+				margin-left: var(--spacing-md);
+				margin-bottom: var(--spacing-sm);
+			}
+
+			li {
+				margin-bottom: 0.25rem;
+			}
+
+			/* Set Symbols Grid */
+			.set-symbols-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+				gap: var(--spacing-md);
+				margin-top: var(--spacing-md);
+			}
+
+			.set-symbol-item {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 0.5rem;
+				padding: var(--spacing-sm);
+				background: var(--card-bg);
+				border-radius: 8px;
+				border: 2px solid var(--color-border);
+				transition: all 0.2s ease;
+				cursor: help;
+			}
+
+			.set-symbol-item:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 4px 12px var(--shadow-orange);
+				border-color: var(--color-accent);
+			}
+
+			.set-symbol-item img {
+				width: 48px;
+				height: 48px;
+				filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+			}
+
+			.set-name {
+				font-size: 0.75rem;
+				text-align: center;
+				color: var(--color-text-muted);
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+				line-height: 1.2;
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+
+			/* Grids */
+			.sets-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+				gap: var(--spacing-md);
+				margin-top: var(--spacing-md);
+			}
+
+			.set-category {
+				background: var(--card-bg);
+				padding: var(--spacing-md);
+				border-radius: 6px;
+				border: 2px solid var(--color-border);
+				box-shadow: 0 4px 12px var(--shadow-orange);
+				transition: transform 0.2s ease, box-shadow 0.2s ease;
+			}
+
+			.set-category:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 6px 20px var(--shadow-orange-hover);
+			}
+
+			.section-alt .set-category {
+				background: var(--card-bg-alt);
+			}
+
+			.set-category h3 {
+				color: var(--color-accent-dark);
+				border-bottom: 2px solid var(--color-sunset-orange);
+				padding-bottom: var(--spacing-xs);
+				margin-bottom: var(--spacing-sm);
+				font-weight: 400;
+			}
+
+			/* Add blue accent to some categories for variety */
+			.set-category:nth-child(3n) h3 {
+				border-bottom-color: var(--color-sky-blue);
+			}
+
+			.set-category:nth-child(3n+1) h3 {
+				border-bottom-color: var(--color-tree-green);
+			}
+
+			.set-category ul {
+				margin-left: 0;
+				list-style: none;
+			}
+
+			.set-category li {
+				padding: 0.25rem 0;
+				padding-left: var(--spacing-sm);
+				position: relative;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+				font-size: 0.95rem;
+			}
+
+			.set-category li:before {
+				content: "◆";
+				position: absolute;
+				left: 0;
+				color: var(--color-sunset-orange);
+				font-size: 0.7rem;
+			}
+
+			/* Banlist Single Column */
+			.banlist-single {
+				margin-top: var(--spacing-md);
+				max-width: 900px;
+				background: var(--card-bg-hover);
+				padding: var(--spacing-md);
+				border-radius: 6px;
+				border: 2px solid var(--color-border);
+				box-shadow: 0 4px 12px var(--shadow-pink);
+			}
+
+			.banlist-single ul {
+				margin-left: 0;
+				list-style: none;
+				columns: 2;
+				column-gap: var(--spacing-lg);
+			}
+
+			.banlist-single li {
+				padding: 0.4rem 0;
+				padding-left: var(--spacing-sm);
+				position: relative;
+				break-inside: avoid;
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+				font-size: 0.95rem;
+			}
+
+			.banlist-single li:before {
+				content: "✖";
+				position: absolute;
+				left: 0;
+				color: var(--color-sunset-pink);
+				font-size: 0.8rem;
+			}
+
+			/* Notes */
+			.note {
+				margin-top: var(--spacing-md);
+				padding: var(--spacing-md);
+				background: var(--shadow-pink);
+				border-left: 4px solid var(--color-sunset-pink);
+				border-radius: 4px;
+				box-shadow: 0 2px 8px var(--shadow-pink-strong);
+			}
+
+			.section-alt .note {
+				background: var(--white-soft);
+			}
+
+			/* Deck Photos */
+			.deck-photos {
+				margin-top: var(--spacing-md);
+				padding: var(--spacing-xl);
+				background: linear-gradient(135deg,
+					var(--overlay-orange-subtle) 0%,
+					var(--overlay-pink-subtle) 100%);
+				border: 3px dashed var(--color-border);
+				border-radius: 8px;
+				text-align: center;
+				box-shadow: inset 0 2px 8px var(--overlay-orange-subtle);
+			}
+
+			.placeholder-text {
+				color: var(--color-text-muted);
+				font-style: italic;
+				font-size: 1.1rem;
+			}
+
+			/* Footer */
+			footer {
+				background: linear-gradient(135deg,
+					var(--overlay-purple-strong) 0%,
+					var(--overlay-pink-light) 50%,
+					var(--overlay-orange-strong) 100%);
+				border-top: 3px solid var(--color-accent);
+				padding: var(--spacing-lg) 0;
+				margin-top: var(--spacing-xl);
+				text-align: center;
+				box-shadow: 0 -2px 20px var(--shadow-pink-strong);
+			}
+
+			footer p {
+				margin-bottom: var(--spacing-sm);
+			}
+
+			.disclaimer {
+				font-size: 0.875rem;
+				color: var(--color-text-muted);
+				max-width: 800px;
+				margin: 0 auto;
+				font-style: italic;
+			}
+
+			/* Responsive Design */
+			@media (max-width: 768px) {
+				:root {
+					--spacing-md: 1.5rem;
+					--spacing-lg: 2rem;
+					--spacing-xl: 2.5rem;
+				}
+
+				.hero h2 {
+					font-size: 2rem;
+				}
+
+				h2 {
+					font-size: 1.75rem;
+				}
+
+				.nav-links {
+					gap: var(--spacing-sm);
+				}
+
+				.sets-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.banlist-single ul {
+					columns: 1;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.container {
+					padding: 0 var(--spacing-sm);
+				}
+
+				.hero h2 {
+					font-size: 1.75rem;
+				}
+
+				.site-title {
+					font-size: 1.25rem;
+				}
+
+				.nav-links {
+					width: 100%;
+					justify-content: center;
+				}
+			}
+		</style>
+	</body>
+</html>
