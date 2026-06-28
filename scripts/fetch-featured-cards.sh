@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Featured cards for Summer 2016 Legacy
+# Featured cards for Peak Legacy
 cards=(
   "Gitaxian Probe"
   "Sensei's Divining Top"
