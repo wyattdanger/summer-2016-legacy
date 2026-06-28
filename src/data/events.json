@@ -30,6 +30,21 @@
     ]
   },
   {
+    "name": "BoM Madrid",
+    "eventId": "11722",
+    "url": "https://mtgtop8.com/event?e=11722&f=LE",
+    "top8": [
+      { "place": 1, "player": "Alain Martin", "deck": "Shardless BUG", "deckId": "266831" },
+      { "place": 2, "player": "Jacob Goddick Hans", "deck": "BUG Delver", "deckId": "266837" },
+      { "place": 3, "player": "Mathieu Jacomy", "deck": "Eldrazi Aggro", "deckId": "266835" },
+      { "place": 4, "player": "Mario Chica", "deck": "HexDepths", "deckId": "266836" },
+      { "place": 5, "player": "Roberto Gonzales Gutierrez", "deck": "Death & Taxes", "deckId": "266832" },
+      { "place": 6, "player": "Tom Kellock", "deck": "Lands", "deckId": "266830" },
+      { "place": 7, "player": "Jorge Larrumbide", "deck": "Shardless BUG", "deckId": "266834" },
+      { "place": 8, "player": "Rodrigo Togores", "deck": "Storm", "deckId": "266833" }
+    ]
+  },
+  {
     "name": "BoM Annecy",
     "eventId": "12303",
     "url": "https://mtgtop8.com/event?e=12303&f=LE",

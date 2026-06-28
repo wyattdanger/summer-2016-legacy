@@ -24,7 +24,7 @@ const { cards, formatName, formatYear } = Astro.props;
       from mid-{formatYear}.
     </p>
 
-    <CardGrid cards={cards} columns={5} cardClass="banned-card" titleLevel="h4" />
+    <CardGrid cards={cards} columns={5} cardClass="banned-card" titleLevel="h4" overlapping={true} />
   </div>
 </section>
 

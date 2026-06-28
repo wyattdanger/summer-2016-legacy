@@ -36,7 +36,7 @@ const { decks } = Astro.props;
         <div class="video-carousel-container">
           <div class="video-embed active" data-index="0">
             <iframe
-              src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYE6Ybrx2UZwlX5e-7FAgxvc"
+              src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYE6Ybrx2UZwlX5e-7FAgxvc&enablejsapi=1"
               title="Legacy Playlist - Gameplay from 2016"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -45,7 +45,7 @@ const { decks } = Astro.props;
           </div>
           <div class="video-embed" data-index="1">
             <iframe
-              src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYGhxAFnmaSjlf8lVOR8iRCx"
+              src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYGhxAFnmaSjlf8lVOR8iRCx&enablejsapi=1"
               title="Legacy Playlist 2 - Gameplay from 2016"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -54,7 +54,7 @@ const { decks } = Astro.props;
           </div>
           <div class="video-embed" data-index="2">
             <iframe
-              src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYFBp68ntNy2hA4eFHXXuspS"
+              src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYFBp68ntNy2hA4eFHXXuspS&enablejsapi=1"
               title="Legacy Playlist 3 - Gameplay from 2016"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -80,6 +80,14 @@ const { decks } = Astro.props;
         let currentIndex = 0;
 
         function showVideo(index) {
+          // Pause current video before switching
+          const currentVideo = videos[currentIndex];
+          const currentIframe = currentVideo.querySelector('iframe');
+          if (currentIframe) {
+            // Send postMessage to pause the video (works with YouTube)
+            currentIframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+          }
+
           videos.forEach((video, i) => {
             video.classList.toggle('active', i === index);
           });
