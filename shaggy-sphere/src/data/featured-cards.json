@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Gitaxian Probe",
+    "image_uri": "https://cards.scryfall.io/normal/front/9/9/995486ce-58bb-4753-a812-0ca73ef1a235.jpg?1562880052",
+    "scryfall_uri": "https://scryfall.com/card/nph/35/gitaxian-probe?utm_source=api",
+    "set": "nph",
+    "set_name": "New Phyrexia"
+  },
+  {
+    "name": "Sensei's Divining Top",
+    "image_uri": "https://cards.scryfall.io/normal/front/4/a/4a08ca06-58db-4ce6-b490-be4bea8956a1.jpg?1562759858",
+    "scryfall_uri": "https://scryfall.com/card/chk/268/senseis-divining-top?utm_source=api",
+    "set": "chk",
+    "set_name": "Champions of Kamigawa"
+  },
+  {
+    "name": "Deathrite Shaman",
+    "image_uri": "https://cards.scryfall.io/normal/front/7/0/70496f16-c4c0-4c03-beef-454eb4824cd1.jpg?1562788028",
+    "scryfall_uri": "https://scryfall.com/card/rtr/213/deathrite-shaman?utm_source=api",
+    "set": "rtr",
+    "set_name": "Return to Ravnica"
+  }
+]

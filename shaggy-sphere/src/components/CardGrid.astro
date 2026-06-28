@@ -1,0 +1,145 @@
+---
+interface Card {
+  name: string;
+  image_uri: string;
+  scryfall_uri: string;
+}
+
+interface Props {
+  cards: Card[];
+  columns?: number;
+  cardClass?: string;
+  titleLevel?: 'h3' | 'h4' | 'span';
+  hideTitle?: boolean;
+}
+
+const { cards, columns = 3, cardClass = 'card', titleLevel = 'h3', hideTitle = true } = Astro.props;
+const TitleTag = titleLevel;
+---
+
+<div class={`card-grid card-grid-${columns}`}>
+  {cards.map((card) => (
+    <div class={cardClass}>
+      <a href={card.scryfall_uri} target="_blank" rel="noopener noreferrer">
+        <img src={card.image_uri} alt={card.name} />
+        <TitleTag class={hideTitle ? 'sr-only' : 'card-name'}>{card.name}</TitleTag>
+      </a>
+    </div>
+  ))}
+</div>
+
+<style>
+  .card-grid {
+    display: grid;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+  }
+
+  .card-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  :global(.featured-card) {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  :global(.featured-card:hover) {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  :global(.allstar-card) {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  :global(.allstar-card:hover) {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  :global(.featured-card) a,
+  :global(.allstar-card) a {
+    display: block;
+    text-decoration: none;
+  }
+
+  :global(.featured-card) img,
+  :global(.allstar-card) img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  :global(.featured-card) h3,
+  :global(.allstar-card) h4 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  :global(.banned-card) {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  :global(.banned-card:hover) {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  :global(.banned-card) a {
+    display: block;
+    text-decoration: none;
+  }
+
+  :global(.banned-card) img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  :global(.banned-card) h4 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+</style>
