@@ -1,0 +1,23 @@
+---
+interface Props {
+  formatName: string;
+  formatYear: string;
+}
+
+const { formatName, formatYear } = Astro.props;
+---
+
+<section class="hero">
+  <div class="container">
+    <h2>Legacy as it was mid-{formatYear}</h2>
+    <p class="intro">
+      An unofficial Magic: The Gathering format capturing a golden age of Legacy
+    </p>
+    <p>
+      {formatName} is free from multiplayer mechanics, Horizons sets, and FIRE design
+    </p>
+    <p>
+      The last legal set is <em>Eldritch Moon</em>. <em>Conspiracy: Take the Crown</em> is not legal
+    </p>
+  </div>
+</section>

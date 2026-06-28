@@ -1,0 +1,389 @@
+---
+interface Deck {
+  name: string;
+  image: string;
+}
+
+interface Props {
+  decks: Deck[];
+}
+
+const { decks } = Astro.props;
+---
+
+<section id="decks" class="section">
+  <div class="container">
+    <h2>Decks</h2>
+
+    <div class="deck-photos-section">
+      <div class="decks-grid">
+      {decks.map(deck => (
+        <div class="deck-photo">
+          <img src={deck.image} alt={deck.name} loading="lazy" />
+          <h3>{deck.name}</h3>
+        </div>
+      ))}
+      </div>
+    </div>
+
+    <div class="video-section">
+      <h4>Video Content</h4>
+      <div class="videos-grid">
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYE6Ybrx2UZwlX5e-7FAgxvc"
+            title="Legacy Playlist - Gameplay from 2016"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYGhxAFnmaSjlf8lVOR8iRCx"
+            title="Legacy Playlist 2 - Gameplay from 2016"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="video-embed">
+          <iframe
+            src="https://www.youtube.com/embed/videoseries?list=PLrpPol5WEyYFBp68ntNy2hA4eFHXXuspS"
+            title="Legacy Playlist 3 - Gameplay from 2016"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="gp-events">
+      <div class="gp-event">
+        <h3><a href="https://mtgtop8.com/event?e=12671&f=LE" target="_blank" rel="noopener noreferrer">GP Prague</a></h3>
+        <ul class="top8-list">
+          <li><a href="https://mtgtop8.com/event?e=12671&d=274043&f=LE" target="_blank" rel="noopener noreferrer">1. Rodrigo Togores - Miracles</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12671&d=274042&f=LE" target="_blank" rel="noopener noreferrer">2. Pascal Vieren - Miracles</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12671&d=274041&f=LE" target="_blank" rel="noopener noreferrer">3. Jan Ksandr - Grixis Delver</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12671&d=274040&f=LE" target="_blank" rel="noopener noreferrer">4. Andrea Cibak - Shardless BUG</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12671&d=274039&f=LE" target="_blank" rel="noopener noreferrer">5. Petr Sochurek - Shardless BUG</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12671&d=274038&f=LE" target="_blank" rel="noopener noreferrer">6. Pierre Dagen - Infect</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12671&d=274037&f=LE" target="_blank" rel="noopener noreferrer">7. Lukas Blohon - Infect</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12671&d=274036&f=LE" target="_blank" rel="noopener noreferrer">8. Robin Dolar - Grixis Delver</a></li>
+        </ul>
+      </div>
+
+      <div class="gp-event">
+        <h3><a href="https://mtgtop8.com/event?e=12681&f=LE" target="_blank" rel="noopener noreferrer">GP Columbus</a></h3>
+        <ul class="top8-list">
+          <li><a href="https://mtgtop8.com/event?e=12681&d=274111&f=LE" target="_blank" rel="noopener noreferrer">1. Clay Spicklemire - Death and Taxes</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12681&d=274110&f=LE" target="_blank" rel="noopener noreferrer">2. Patrick Tierney - Grixis Delver</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12681&d=274109&f=LE" target="_blank" rel="noopener noreferrer">3. Alexander Hayne - Eldrazi</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12681&d=274108&f=LE" target="_blank" rel="noopener noreferrer">4. Reid Duke - Shardless BUG</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12681&d=274107&f=LE" target="_blank" rel="noopener noreferrer">5. Eric Rill - Eldrazi</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12681&d=274106&f=LE" target="_blank" rel="noopener noreferrer">6. Seth Manfield - Grixis Delver</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12681&d=274105&f=LE" target="_blank" rel="noopener noreferrer">7. Matthew Barlow - Grixis Delver</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12681&d=274104&f=LE" target="_blank" rel="noopener noreferrer">8. Jarvis Yu - Grixis Delver</a></li>
+        </ul>
+      </div>
+
+      <div class="gp-event">
+        <h3><a href="https://mtgtop8.com/event?e=12947&f=LE" target="_blank" rel="noopener noreferrer">SCG Worcester</a></h3>
+        <ul class="top8-list">
+          <li><a href="https://mtgtop8.com/event?e=12947&d=277006&f=LE" target="_blank" rel="noopener noreferrer">1. Ed Dimicco - UR Delver</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12947&d=277005&f=LE" target="_blank" rel="noopener noreferrer">2. Kevin King - Lands</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12947&d=277004&f=LE" target="_blank" rel="noopener noreferrer">3. Rob Blocher - Dragon Stompy</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12947&d=277003&f=LE" target="_blank" rel="noopener noreferrer">4. Joe Lossett - UW Miracles</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12947&d=277002&f=LE" target="_blank" rel="noopener noreferrer">5. Ben Friedman - 4c Delver</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12947&d=277001&f=LE" target="_blank" rel="noopener noreferrer">6. Todd Stevens - Berserk Poison</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12947&d=277000&f=LE" target="_blank" rel="noopener noreferrer">7. Jeff Hoogland - Mono Red Sneak Attack</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12947&d=276999&f=LE" target="_blank" rel="noopener noreferrer">8. Jonathan Morawski - Reanimator</a></li>
+        </ul>
+      </div>
+
+      <div class="gp-event">
+        <h3><a href="https://mtgtop8.com/event?e=12908&f=LE" target="_blank" rel="noopener noreferrer">Bazaar of Moxen - Strasbourg</a></h3>
+        <ul class="top8-list">
+          <li><a href="https://mtgtop8.com/event?e=12908&d=276698&f=LE" target="_blank" rel="noopener noreferrer">1. Anton Karlinski - Eldrazi Aggro</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12908&d=276697&f=LE" target="_blank" rel="noopener noreferrer">2. Johannes Gutbord - UW Miracles</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12908&d=276696&f=LE" target="_blank" rel="noopener noreferrer">3. Bartl Sebastian - Elves</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12908&d=276695&f=LE" target="_blank" rel="noopener noreferrer">4. Kevin Sauvageon - Eldrazi Aggro</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12908&d=276694&f=LE" target="_blank" rel="noopener noreferrer">5. Pierre Canali - Shardless Oppo BUG</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12908&d=276693&f=LE" target="_blank" rel="noopener noreferrer">6. Gary Mialaret - UW Miracles</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12908&d=276692&f=LE" target="_blank" rel="noopener noreferrer">7. Locoge David - UR Delver</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12908&d=276691&f=LE" target="_blank" rel="noopener noreferrer">8. Niklas Holtmann - Shardless BUG</a></li>
+        </ul>
+      </div>
+
+      <div class="gp-event">
+        <h3><a href="https://mtgtop8.com/event?e=12863&f=LE" target="_blank" rel="noopener noreferrer">SCG Dallas</a></h3>
+        <ul class="top8-list">
+          <li><a href="https://mtgtop8.com/event?e=12863&d=276412&f=LE" target="_blank" rel="noopener noreferrer">1. Jarrod Feight - Death & Taxes</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12863&d=276411&f=LE" target="_blank" rel="noopener noreferrer">2. Ben Kendrick - Eldrazi Aggro</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12863&d=276410&f=LE" target="_blank" rel="noopener noreferrer">3. Mark Church - Death & Taxes</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12863&d=276409&f=LE" target="_blank" rel="noopener noreferrer">4. Patrick Vincent - Reanimator</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12863&d=276408&f=LE" target="_blank" rel="noopener noreferrer">5. Steven Fremin - Death & Taxes</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12863&d=276407&f=LE" target="_blank" rel="noopener noreferrer">6. Albert Huang - Doomsday</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12863&d=276406&f=LE" target="_blank" rel="noopener noreferrer">7. Keane Frady - Dredge</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12863&d=276405&f=LE" target="_blank" rel="noopener noreferrer">8. Russell Cooper - Lands</a></li>
+        </ul>
+      </div>
+
+      <div class="gp-event">
+        <h3><a href="https://mtgtop8.com/event?e=12303&f=LE" target="_blank" rel="noopener noreferrer">BoM Annecy</a></h3>
+        <ul class="top8-list">
+          <li><a href="https://mtgtop8.com/event?e=12303&d=271107&f=LE" target="_blank" rel="noopener noreferrer">1. Anton Karlinski - Eldrazi Aggro</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12303&d=271106&f=LE" target="_blank" rel="noopener noreferrer">2. Florian Stange - Belcher</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12303&d=271105&f=LE" target="_blank" rel="noopener noreferrer">3. Damien Uliana - ANT</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12303&d=271104&f=LE" target="_blank" rel="noopener noreferrer">4. Serafin Wellinger - UW Miracles</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12303&d=271103&f=LE" target="_blank" rel="noopener noreferrer">5. Carlos Moral - ANT</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12303&d=271102&f=LE" target="_blank" rel="noopener noreferrer">6. Guillaume Perbet - BUG Thing in the Ice</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12303&d=271101&f=LE" target="_blank" rel="noopener noreferrer">7. David Teze - Elfball Lands</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12303&d=271100&f=LE" target="_blank" rel="noopener noreferrer">8. Peter White - Grixis Delver</a></li>
+        </ul>
+      </div>
+
+      <div class="gp-event">
+        <h3><a href="https://mtgtop8.com/event?e=12433&f=LE" target="_blank" rel="noopener noreferrer">MKM Frankfurt</a></h3>
+        <ul class="top8-list">
+          <li><a href="https://mtgtop8.com/event?e=12433&d=272088&f=LE" target="_blank" rel="noopener noreferrer">1. Niklas Kronberger - Loam</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12433&d=272087&f=LE" target="_blank" rel="noopener noreferrer">2. Fabian Görzgen - Maverick</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12433&d=272086&f=LE" target="_blank" rel="noopener noreferrer">3. Niklas Holtmann - Elves</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12433&d=272085&f=LE" target="_blank" rel="noopener noreferrer">4. David Raabe - Storm</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12433&d=272084&f=LE" target="_blank" rel="noopener noreferrer">5. Amadeus Kurz - BUG Midrange</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12433&d=272083&f=LE" target="_blank" rel="noopener noreferrer">6. Jonas Zimmermann - Nic Fit</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12433&d=272082&f=LE" target="_blank" rel="noopener noreferrer">7. Felix Höfler - Stoneblade</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12433&d=272081&f=LE" target="_blank" rel="noopener noreferrer">8. Stefan Schütz - UW Miracles</a></li>
+        </ul>
+      </div>
+
+      <div class="gp-event">
+        <h3><a href="https://mtgtop8.com/event?e=12443&f=LE" target="_blank" rel="noopener noreferrer">SCG Indianapolis</a></h3>
+        <ul class="top8-list">
+          <li><a href="https://mtgtop8.com/event?e=12443&d=272214&f=LE" target="_blank" rel="noopener noreferrer">1. Clay Spicklemire - Infect</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12443&d=272213&f=LE" target="_blank" rel="noopener noreferrer">2. Robert Cucunato - Reanimator</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12443&d=272212&f=LE" target="_blank" rel="noopener noreferrer">3. Riley Curran - Elves</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12443&d=272211&f=LE" target="_blank" rel="noopener noreferrer">4. Jon Lenz - Goblins</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12443&d=272210&f=LE" target="_blank" rel="noopener noreferrer">5. Matthew Tickal - Miracles</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12443&d=272209&f=LE" target="_blank" rel="noopener noreferrer">6. Isaac Siegmund - Storm</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12443&d=272208&f=LE" target="_blank" rel="noopener noreferrer">7. Jim Davis - Sultai Delver</a></li>
+          <li><a href="https://mtgtop8.com/event?e=12443&d=272207&f=LE" target="_blank" rel="noopener noreferrer">8. Michael Finnegan - Tinfins</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="articles-section">
+      <h3>Articles from 2016</h3>
+      <ul class="articles-list">
+        <li><a href="https://www.mtggoldfish.com/articles/this-week-in-legacy-july-wrap-up-legacy-festival-and-more-c74d9ccc-b6fd-48c3-8dd4-93bc60b8704b" target="_blank" rel="noopener noreferrer">This Week in Legacy: July Wrap-Up (Legacy Festival and More)</a></li>
+        <li><a href="https://www.mtggoldfish.com/articles/this-week-in-legacy-mkm-madrid-and-cheating-fatties-into-play" target="_blank" rel="noopener noreferrer">This Week in Legacy: MKM Madrid and Cheating Fatties Into Play</a></li>
+        <li><a href="https://www.mtggoldfish.com/articles/this-week-in-legacy-scg-worcester-recap-and-prison-control-decks" target="_blank" rel="noopener noreferrer">This Week in Legacy: SCG Worcester Recap and Prison Control Decks</a></li>
+        <li><a href="https://www.mtggoldfish.com/articles/this-week-in-legacy-introduction-to-delver" target="_blank" rel="noopener noreferrer">This Week in Legacy: Introduction to Delver</a></li>
+        <li><a href="https://articles.starcitygames.com/articles/leaving-a-legacy-runner-up-with-miracles/" target="_blank" rel="noopener noreferrer">Leaving a Legacy: Runner-Up with Miracles</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .gp-events {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  @media (min-width: 768px) {
+    .gp-events {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .gp-event {
+    background: rgba(255, 255, 255, 0.5);
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .gp-event h3 {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.3rem;
+    color: var(--color-accent-dark);
+  }
+
+  .gp-event h3 a {
+    color: var(--color-accent-dark);
+    text-decoration: none;
+  }
+
+  .gp-event h3 a:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+
+  .top8-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .top8-list li {
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.6;
+  }
+
+  .top8-list a {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.3);
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  }
+
+  .top8-list a:hover {
+    color: var(--color-accent);
+    text-decoration-color: var(--color-accent);
+  }
+
+  .articles-section {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .articles-section h3 {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+    color: var(--color-text);
+  }
+
+  .articles-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--spacing-sm);
+  }
+
+  .articles-list li {
+    background: rgba(255, 255, 255, 0.3);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 6px;
+    border-left: 3px solid var(--color-accent);
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .articles-list li:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border-left-color: var(--color-accent-dark);
+  }
+
+  .articles-list a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1.05rem;
+  }
+
+  .articles-list a:hover {
+    color: var(--color-accent-dark);
+  }
+
+  .video-section {
+    margin-top: var(--spacing-lg);
+  }
+
+  .video-section h4 {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.2rem;
+    color: var(--color-text);
+  }
+
+  .videos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  @media (min-width: 768px) {
+    .videos-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .video-embed {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .deck-photos-section {
+    margin-top: var(--spacing-xl);
+  }
+
+  .deck-photos-section h4 {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.2rem;
+    color: var(--color-text);
+  }
+
+  .decks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  .deck-photo {
+    position: relative;
+    background: #fff;
+    padding: 12px 12px 40px 12px;
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.15),
+      0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: rotate(-1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .deck-photo:nth-child(even) {
+    transform: rotate(1deg);
+  }
+
+  .deck-photo:hover {
+    transform: rotate(0deg) translateY(-4px);
+    box-shadow:
+      0 8px 16px rgba(0, 0, 0, 0.2),
+      0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .deck-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .deck-photo h3 {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0 12px;
+    font-size: 1rem;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    color: var(--color-text);
+  }
+</style>

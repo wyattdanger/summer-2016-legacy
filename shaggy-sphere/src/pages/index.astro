@@ -3,23 +3,20 @@
 const FORMAT_NAME = "Summer 2016 Legacy";
 const FORMAT_YEAR = "2016";
 
-// Import legal sets data
+// Import components
+import Hero from '../components/Hero.astro';
+import AllStarCardsSection from '../components/AllStarCardsSection.astro';
+import FeaturedCardsSection from '../components/FeaturedCardsSection.astro';
+import DecksSection from '../components/DecksSection.astro';
+import BanlistSection from '../components/BanlistSection.astro';
+import LegalSetsSection from '../components/LegalSetsSection.astro';
+
+// Import data
 import legalSets from '../data/legal-sets.json';
 import bannedCards from '../data/banned-cards.json';
 import featuredCards from '../data/featured-cards.json';
 import allstarCards from '../data/allstar-cards.json';
 import decks from '../data/decks.json';
-import CardGrid from '../components/CardGrid.astro';
-
-// Helper function to format dates nicely
-function formatDate(dateString) {
-  const date = new Date(dateString);
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-}
 ---
 
 <html lang="en">
@@ -50,316 +47,24 @@ function formatDate(dateString) {
 		</header>
 
 		<main>
-			<!-- All-Star Cards Section -->
-			<section class="allstar-cards-section">
-				<div class="container">
-					<CardGrid cards={allstarCards} columns={5} cardClass="allstar-card" titleLevel="h4" />
-				</div>
-			</section>
-
-			<!-- Hero Section -->
-			<section class="hero">
-				<div class="container">
-					<h2>Legacy as it was in {FORMAT_YEAR}</h2>
-					<p class="intro">
-						An unofficial Magic: The Gathering format with sets legal through <strong>Eldritch Moon</strong> (July {FORMAT_YEAR}).
-					</p>
-					<p>
-						This format captures the epic double GP Legacy events that were in the same weekend with Rodrigo Togores taking down <a href="https://mtgtop8.com/event?e=12671&f=LE" target="_blank" rel="noopener noreferrer">GP Prague</a> and Clay Spicklemire winning <a href="https://www.mtgtop8.com/event?e=12681&f=LE" target="_blank" rel="noopener noreferrer">GP Columbus</a>.
-					</p>
-					<p>
-						The last legal set is <em>Eldritch Moon</em>. <em>Conspiracy: Take the Crown</em> is not legal. There is no monarch and there are no multiplayer mechanics in {FORMAT_NAME}.
-					</p>
-				</div>
-			</section>
-
-			<!-- Featured Cards Section -->
-			<section class="featured-cards-section">
-				<div class="container">
-					<CardGrid cards={featuredCards} columns={3} cardClass="featured-card" titleLevel="h3" />
-				</div>
-			</section>
+		<!-- All-Star Cards Section -->
+		<AllStarCardsSection cards={allstarCards} />
 
 
-			<!-- Decks Section -->
-			<section id="decks" class="section">
-				<div class="container">
-					<h2>Decks</h2>
+		<!-- Hero Section -->
+		<Hero formatName={FORMAT_NAME} formatYear={FORMAT_YEAR} />
 
-					<div class="decks-grid">
-						{decks.map(deck => (
-							<div class="deck-photo">
-								<img src={deck.image} alt={deck.name} loading="lazy" />
-								<h3>{deck.name}</h3>
-							</div>
-						))}
-					</div>
-				</div>
-			</section>
-			<!-- Legal Sets Section -->
-			<section id="legal-sets" class="section">
-				<div class="container">
-					<h2>Legal Sets</h2>
-			<!-- Banlist Section -->
-			<section id="banlist" class="section section-alt">
-				<div class="container">
-					<h2>Banned Cards</h2>
-					<p class="section-intro">
-						These cards are banned in {FORMAT_NAME}, based on the official Legacy banlist
-						from mid-{FORMAT_YEAR}.
-					</p>
 
-					<CardGrid cards={bannedCards} columns={5} cardClass="banned-card" titleLevel="h4" />
+		<!-- Featured Cards Section -->
+		<FeaturedCardsSection cards={featuredCards} />
 
-					<p class="note">
-						<strong>Note:</strong> Cards like Sensei's Divining Top and Deathrite Shaman
-						are legal—they weren't banned until later.
-					</p>
-				</div>
-			</section>
-					<p class="section-intro">
-						All Magic: The Gathering sets released from <strong>Limited Edition Alpha</strong>
-						through <strong>Eldritch Moon (July 2016)</strong> are legal in this format.
-					</p>
+		<!-- Decks Section -->
+		<DecksSection decks={decks} />
 
-					<div class="set-symbols-grid">
-						{legalSets.map(set => (
-							<div class="set-symbol-item" title={`${set.name}\nReleased: ${formatDate(set.released_at)}`}>
-								<img src={set.icon_svg_uri} alt={set.name} />
-								<span class="set-name">{set.name}</span>
-							</div>
-						))}
-					</div>
-
-					<div class="sets-grid" style="display: none;">
-						<div class="set-category">
-							<h3>Early Sets (1993-1995)</h3>
-							<ul>
-								<li>Limited Edition Alpha</li>
-								<li>Limited Edition Beta</li>
-								<li>Unlimited Edition</li>
-								<li>Arabian Nights</li>
-								<li>Antiquities</li>
-								<li>Legends</li>
-								<li>The Dark</li>
-								<li>Fallen Empires</li>
-								<li>Ice Age</li>
-								<li>Homelands</li>
-								<li>Alliances</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Mirage Block (1996-1997)</h3>
-							<ul>
-								<li>Mirage</li>
-								<li>Visions</li>
-								<li>Weatherlight</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Tempest Block (1997-1998)</h3>
-							<ul>
-								<li>Tempest</li>
-								<li>Stronghold</li>
-								<li>Exodus</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Urza Block (1998-1999)</h3>
-							<ul>
-								<li>Urza's Saga</li>
-								<li>Urza's Legacy</li>
-								<li>Urza's Destiny</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Masques Block (1999-2001)</h3>
-							<ul>
-								<li>Mercadian Masques</li>
-								<li>Nemesis</li>
-								<li>Prophecy</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Invasion Block (2000-2001)</h3>
-							<ul>
-								<li>Invasion</li>
-								<li>Planeshift</li>
-								<li>Apocalypse</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Odyssey Block (2001-2002)</h3>
-							<ul>
-								<li>Odyssey</li>
-								<li>Torment</li>
-								<li>Judgment</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Onslaught Block (2002-2003)</h3>
-							<ul>
-								<li>Onslaught</li>
-								<li>Legions</li>
-								<li>Scourge</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Mirrodin Block (2003-2004)</h3>
-							<ul>
-								<li>Mirrodin</li>
-								<li>Darksteel</li>
-								<li>Fifth Dawn</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Kamigawa Block (2004-2005)</h3>
-							<ul>
-								<li>Champions of Kamigawa</li>
-								<li>Betrayers of Kamigawa</li>
-								<li>Saviors of Kamigawa</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Ravnica Block (2005-2006)</h3>
-							<ul>
-								<li>Ravnica: City of Guilds</li>
-								<li>Guildpact</li>
-								<li>Dissension</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Time Spiral Block (2006-2007)</h3>
-							<ul>
-								<li>Time Spiral</li>
-								<li>Planar Chaos</li>
-								<li>Future Sight</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Lorwyn-Shadowmoor (2007-2008)</h3>
-							<ul>
-								<li>Lorwyn</li>
-								<li>Morningtide</li>
-								<li>Shadowmoor</li>
-								<li>Eventide</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Alara Block (2008-2009)</h3>
-							<ul>
-								<li>Shards of Alara</li>
-								<li>Conflux</li>
-								<li>Alara Reborn</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Zendikar Block (2009-2010)</h3>
-							<ul>
-								<li>Zendikar</li>
-								<li>Worldwake</li>
-								<li>Rise of the Eldrazi</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Scars of Mirrodin Block (2010-2011)</h3>
-							<ul>
-								<li>Scars of Mirrodin</li>
-								<li>Mirrodin Besieged</li>
-								<li>New Phyrexia</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Innistrad Block (2011-2012)</h3>
-							<ul>
-								<li>Innistrad</li>
-								<li>Dark Ascension</li>
-								<li>Avacyn Restored</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Return to Ravnica Block (2012-2013)</h3>
-							<ul>
-								<li>Return to Ravnica</li>
-								<li>Gatecrash</li>
-								<li>Dragon's Maze</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Theros Block (2013-2014)</h3>
-							<ul>
-								<li>Theros</li>
-								<li>Born of the Gods</li>
-								<li>Journey into Nyx</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Khans of Tarkir Block (2014-2015)</h3>
-							<ul>
-								<li>Khans of Tarkir</li>
-								<li>Fate Reforged</li>
-								<li>Dragons of Tarkir</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Battle for Zendikar Block (2015-2016)</h3>
-							<ul>
-								<li>Battle for Zendikar</li>
-								<li>Oath of the Gatewatch</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Shadows Over Innistrad Block (2016)</h3>
-							<ul>
-								<li>Shadows over Innistrad</li>
-								<li>Eldritch Moon</li>
-							</ul>
-						</div>
-
-						<div class="set-category">
-							<h3>Core Sets</h3>
-							<ul>
-								<li>Fourth Edition (1995)</li>
-								<li>Fifth Edition (1997)</li>
-								<li>Sixth Edition (1999)</li>
-								<li>Seventh Edition (2001)</li>
-								<li>Eighth Edition (2003)</li>
-								<li>Ninth Edition (2005)</li>
-								<li>Tenth Edition (2007)</li>
-								<li>Magic 2010 (2009)</li>
-								<li>Magic 2011 (2010)</li>
-								<li>Magic 2012 (2011)</li>
-								<li>Magic 2013 (2012)</li>
-								<li>Magic 2014 (2013)</li>
-								<li>Magic 2015 (2014)</li>
-								<li>Magic Origins (2015)</li>
-							</ul>
-						</div>
-					</div>
-
-				</div>
-			</section>
+		<!-- Banlist Section -->
+		<BanlistSection cards={bannedCards} formatName={FORMAT_NAME} formatYear={FORMAT_YEAR} />
+		<!-- Legal Sets Section -->
+		<LegalSetsSection legalSets={legalSets} />
 
 
 		</main>
@@ -376,7 +81,7 @@ function formatDate(dateString) {
 			</div>
 		</footer>
 
-		<style>
+		<style is:global>
 			* {
 				margin: 0;
 				padding: 0;
@@ -557,7 +262,7 @@ function formatDate(dateString) {
 
 			/* Sections */
 			.section {
-				padding: var(--spacing-xl) 0;
+				padding: var(--spacing-lg) 0;
 			}
 
 			.section-alt {
@@ -568,7 +273,7 @@ function formatDate(dateString) {
 			}
 
 			.hero {
-				padding: var(--spacing-lg) 0;
+				padding: var(--spacing-md) 0;
 				text-align: center;
 				background: linear-gradient(135deg,
 					var(--overlay-orange-strong) 0%,
@@ -611,7 +316,7 @@ function formatDate(dateString) {
 			.intro {
 				font-size: 1.15rem;
 				max-width: 800px;
-				margin: 0 auto var(--spacing-md);
+				margin: 0 auto var(--spacing-sm);
 				line-height: 1.8;
 				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 			}

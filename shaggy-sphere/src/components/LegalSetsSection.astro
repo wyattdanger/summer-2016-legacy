@@ -1,0 +1,80 @@
+---
+interface LegalSet {
+  name: string;
+  code: string;
+  released_at: string;
+  icon_svg_uri: string;
+}
+
+interface Props {
+  legalSets: LegalSet[];
+}
+
+const { legalSets } = Astro.props;
+
+// Helper function to format dates nicely
+function formatDate(dateString: string) {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+---
+
+<section id="legal-sets" class="section">
+  <div class="container">
+    <h2>Legal Sets</h2>
+    <p class="section-intro">
+      All Magic: The Gathering sets released from <strong>Limited Edition Alpha</strong>
+      through <strong>Eldritch Moon (July 2016)</strong> are legal in this format.
+    </p>
+
+    <div class="set-symbols-grid">
+      {legalSets.map(set => (
+        <div class="set-symbol-item" title={`${set.name}\nReleased: ${formatDate(set.released_at)}`}>
+          <img src={set.icon_svg_uri} alt={set.name} />
+          <span class="set-name">{set.name}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .set-symbols-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+
+  .set-symbol-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    cursor: help;
+    transition: transform 0.2s ease;
+  }
+
+  .set-symbol-item:hover {
+    transform: translateY(-2px);
+  }
+
+  .set-symbol-item img {
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  }
+
+  .set-name {
+    font-size: 0.75rem;
+    text-align: center;
+    color: var(--text-muted);
+    line-height: 1.2;
+    max-width: 100px;
+  }
+</style>

@@ -1,0 +1,43 @@
+---
+import CardGrid from './CardGrid.astro';
+
+interface Card {
+  name: string;
+  image_uri: string;
+  scryfall_uri: string;
+}
+
+interface Props {
+  cards: Card[];
+}
+
+const { cards } = Astro.props;
+---
+
+<section class="allstar-cards-section">
+  <div class="container">
+    <CardGrid cards={cards} columns={5} cardClass="allstar-card" titleLevel="h4" />
+  </div>
+</section>
+
+<style>
+  .allstar-cards-section {
+    padding: var(--spacing-md) 0 0;
+  }
+
+  :global(.allstar-card) {
+    transition: transform 0.2s ease;
+  }
+
+  :global(.allstar-card:hover) {
+    transform: translateY(-4px);
+  }
+
+  :global(.allstar-card img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+</style>

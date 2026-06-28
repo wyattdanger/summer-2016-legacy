@@ -1,0 +1,47 @@
+---
+import CardGrid from './CardGrid.astro';
+
+interface Card {
+  name: string;
+  image_uri: string;
+  scryfall_uri: string;
+}
+
+interface Props {
+  cards: Card[];
+  formatName: string;
+  formatYear: string;
+}
+
+const { cards, formatName, formatYear } = Astro.props;
+---
+
+<section id="banlist" class="section section-alt">
+  <div class="container">
+    <h2>Banned Cards</h2>
+    <p class="section-intro">
+      These cards are banned in {formatName}, based on the official Legacy banlist
+      from mid-{formatYear}.
+    </p>
+
+    <CardGrid cards={cards} columns={5} cardClass="banned-card" titleLevel="h4" />
+  </div>
+</section>
+
+<style>
+  :global(.banned-card) {
+    transition: transform 0.2s ease;
+  }
+
+  :global(.banned-card:hover) {
+    transform: translateY(-4px);
+  }
+
+  :global(.banned-card img) {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+</style>
