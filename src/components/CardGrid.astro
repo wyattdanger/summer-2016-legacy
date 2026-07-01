@@ -158,4 +158,26 @@ const TitleTag = titleLevel;
     border-width: 0;
   }
 
+  @media (max-width: 768px) {
+    :global(.featured-card) {
+      border-radius: 4px;
+    }
+
+    :global(.allstar-card),
+    :global(.banned-card) {
+      border-radius: 3px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    :global(.featured-card) {
+      border-radius: 3px;
+    }
+
+    :global(.allstar-card),
+    :global(.banned-card) {
+      border-radius: 2px;
+    }
+  }
+
 </style>
