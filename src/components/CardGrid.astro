@@ -45,7 +45,18 @@ const TitleTag = titleLevel;
     margin-bottom: var(--spacing-lg);
   }
 
+  .card-grid-10 {
+    grid-template-columns: repeat(10, 1fr);
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+  }
+
   .card-grid-overlapping.card-grid-5 {
+    column-gap: 0;
+    row-gap: 0;
+  }
+
+  .card-grid-overlapping.card-grid-10 {
     column-gap: 0;
     row-gap: 0;
   }
@@ -54,7 +65,11 @@ const TitleTag = titleLevel;
     margin-top: -55%;
   }
 
-  .card-grid-overlapping > *:nth-child(-n+5) {
+  .card-grid-overlapping.card-grid-5 > *:nth-child(-n+5) {
+    margin-top: 0;
+  }
+
+  .card-grid-overlapping.card-grid-10 > *:nth-child(-n+10) {
     margin-top: 0;
   }
 
@@ -159,6 +174,18 @@ const TitleTag = titleLevel;
   }
 
   @media (max-width: 768px) {
+    .card-grid-10 {
+      grid-template-columns: repeat(7, 1fr);
+    }
+
+    .card-grid-overlapping.card-grid-10 > *:nth-child(-n+10) {
+      margin-top: -55%;
+    }
+
+    .card-grid-overlapping.card-grid-10 > *:nth-child(-n+7) {
+      margin-top: 0;
+    }
+
     :global(.featured-card) {
       border-radius: 4px;
     }

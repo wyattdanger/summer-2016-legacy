@@ -35,7 +35,7 @@ function formatDate(dateString: string) {
       {legalSets.map(set => (
         <div class="set-symbol-item" title={`${set.name}\nReleased: ${formatDate(set.released_at)}`}>
           <img src={set.icon_svg_uri} alt={set.name} />
-          <span class="set-name">{set.name}</span>
+          <span class="set-name">{set.code.toUpperCase()}</span>
         </div>
       ))}
     </div>
@@ -45,8 +45,8 @@ function formatDate(dateString: string) {
 <style>
   .set-symbols-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    gap: var(--spacing-md);
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: var(--spacing-sm);
     margin-top: var(--spacing-lg);
   }
 
@@ -54,8 +54,8 @@ function formatDate(dateString: string) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-sm);
+    gap: 0.25rem;
+    padding: 0.5rem;
     cursor: help;
     transition: transform 0.2s ease;
   }
@@ -65,16 +65,17 @@ function formatDate(dateString: string) {
   }
 
   .set-symbol-item img {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
   }
 
   .set-name {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     text-align: center;
     color: var(--text-muted);
     line-height: 1.2;
-    max-width: 100px;
+    font-family: monospace;
+    letter-spacing: 0.5px;
   }
 </style>

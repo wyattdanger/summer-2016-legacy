@@ -24,7 +24,7 @@ const { cards, formatName, formatYear } = Astro.props;
       from mid-{formatYear}.
     </p>
 
-    <CardGrid cards={cards} columns={5} cardClass="banned-card" titleLevel="h4" overlapping={true} />
+    <CardGrid cards={cards} columns={10} cardClass="banned-card" titleLevel="h4" overlapping={true} />
   </div>
 </section>
 
@@ -41,7 +41,19 @@ const { cards, formatName, formatYear } = Astro.props;
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 12px;
+    border-radius: 6px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    :global(.banned-card img) {
+      border-radius: 3px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    :global(.banned-card img) {
+      border-radius: 2px;
+    }
   }
 </style>
