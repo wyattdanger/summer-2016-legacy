@@ -46,6 +46,9 @@ import { inject } from '@vercel/analytics';
 						<li><a href="#decks">Decks</a></li>
 						<li><a href="#banlist">Banlist</a></li>
 						<li><a href="#legal-sets">Legal Sets</a></li>
+						<li><a href="https://discord.gg/tk7rJuquc" target="_blank" rel="noopener noreferrer" class="discord-nav-link" title="Join us on Discord">
+							<img src="/discord.svg" alt="Discord" class="discord-nav-icon" />
+						</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -78,6 +81,12 @@ import { inject } from '@vercel/analytics';
 			<div class="container">
 				<p>
 					{FORMAT_NAME} is an unofficial fan format.
+				</p>
+				<p class="footer-discord">
+					<a href="https://discord.gg/tk7rJuquc" target="_blank" rel="noopener noreferrer" class="discord-footer-link">
+						<img src="/discord.svg" alt="Discord" class="discord-icon" />
+						Join us on Discord
+					</a>
 				</p>
 				<p class="disclaimer">
 					Magic: The Gathering is trademark and copyright Wizards of the Coast, Inc.<br />
@@ -256,6 +265,29 @@ import { inject } from '@vercel/analytics';
 			.nav-links a:hover {
 				color: var(--color-accent-dark);
 				border-bottom-color: var(--color-sunset-orange);
+			}
+
+			.discord-nav-link {
+				display: flex;
+				align-items: center;
+				border-bottom: 2px solid transparent !important;
+				padding: 0.25rem !important;
+			}
+
+			.discord-nav-link:hover {
+				color: var(--color-text-muted) !important;
+				border-bottom-color: transparent !important;
+			}
+
+			.discord-nav-icon {
+				width: 20px;
+				height: 20px;
+				filter: invert(42%) sepia(8%) saturate(1204%) hue-rotate(220deg) brightness(92%) contrast(88%);
+				transition: all 0.3s ease;
+			}
+
+			.discord-nav-link:hover .discord-nav-icon {
+				/* no hover effect */
 			}
 
 			/* Container */
@@ -728,6 +760,35 @@ import { inject } from '@vercel/analytics';
 
 			footer p {
 				margin-bottom: var(--spacing-sm);
+			}
+
+			.footer-discord {
+				margin: var(--spacing-md) 0;
+			}
+
+			.discord-footer-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.5rem;
+				font-size: 1.1rem;
+				font-weight: 500;
+				padding: 0.75rem 1.5rem;
+				background: rgba(88, 101, 242, 0.1);
+				border: 2px solid #5865F2;
+				border-radius: 8px;
+				transition: all 0.3s ease;
+				text-decoration: none;
+				color: var(--color-text);
+			}
+
+			.discord-footer-link:hover {
+				/* no hover effect */
+			}
+
+			.discord-icon {
+				width: 24px;
+				height: 24px;
+				filter: invert(42%) sepia(8%) saturate(1204%) hue-rotate(220deg) brightness(92%) contrast(88%);
 			}
 
 			.disclaimer {
