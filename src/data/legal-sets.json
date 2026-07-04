@@ -133,6 +133,13 @@
     "set_type": "core"
   },
   {
+    "code": "por",
+    "name": "Portal",
+    "released_at": "1997-05-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/por.svg?1782705600",
+    "set_type": "starter"
+  },
+  {
     "code": "wth",
     "name": "Weatherlight",
     "released_at": "1997-06-09",
@@ -161,6 +168,13 @@
     "set_type": "expansion"
   },
   {
+    "code": "p02",
+    "name": "Portal Second Age",
+    "released_at": "1998-06-24",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/p02.svg?1782705600",
+    "set_type": "starter"
+  },
+  {
     "code": "usg",
     "name": "Urza's Saga",
     "released_at": "1998-10-12",
@@ -180,6 +194,13 @@
     "released_at": "1999-04-21",
     "icon_svg_uri": "https://svgs.scryfall.io/sets/6ed.svg?1782100800",
     "set_type": "core"
+  },
+  {
+    "code": "ptk",
+    "name": "Portal Three Kingdoms",
+    "released_at": "1999-05-01",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/ptk.svg?1782705600",
+    "set_type": "starter"
   },
   {
     "code": "uds",
