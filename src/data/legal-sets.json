@@ -630,6 +630,13 @@
     "set_type": "expansion"
   },
   {
+    "code": "cns",
+    "name": "Conspiracy",
+    "released_at": "2014-06-06",
+    "icon_svg_uri": "https://svgs.scryfall.io/sets/cns.svg?1785729600",
+    "set_type": "draft_innovation"
+  },
+  {
     "code": "m15",
     "name": "Magic 2015",
     "released_at": "2014-07-18",
